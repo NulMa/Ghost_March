@@ -11279,7 +11279,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8.444445
+  orthographic size: 8.111111
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -13413,76 +13413,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: []
   spawnData:
-  - spawnTime: 0.5
-    spriteType: 0
-    health: 10
-    speed: 1.5
-    scale: 0.5
-    color: {r: 1, g: 1, b: 1, a: 1}
-    mass: 3
-  - spawnTime: 0.3
-    spriteType: 0
-    health: 15
-    speed: 1.5
-    scale: 0.5
-    color: {r: 1, g: 0.76792455, b: 0.76792455, a: 1}
-    mass: 3
-  - spawnTime: 1
-    spriteType: 0
-    health: 50
-    speed: 1
-    scale: 2
-    color: {r: 0.90201885, g: 0.56981134, b: 1, a: 1}
-    mass: 6
-  - spawnTime: 0.4
-    spriteType: 1
-    health: 30
-    speed: 2
-    scale: 0.5
-    color: {r: 1, g: 1, b: 1, a: 1}
-    mass: 4
-  - spawnTime: 0.2
-    spriteType: 1
-    health: 40
-    speed: 2.5
-    scale: 0.5
-    color: {r: 0.7506861, g: 1, b: 0.71132076, a: 1}
-    mass: 4
-  - spawnTime: 2
-    spriteType: 1
-    health: 300
-    speed: 2
-    scale: 2
-    color: {r: 0.67358494, g: 0.7780378, b: 1, a: 1}
-    mass: 8
-  - spawnTime: 0.3
-    spriteType: 2
-    health: 50
-    speed: 2.5
-    scale: 0.5
-    color: {r: 1, g: 1, b: 1, a: 1}
-    mass: 6
-  - spawnTime: 0.2
-    spriteType: 2
-    health: 50
-    speed: 2.5
-    scale: 0.5
-    color: {r: 1, g: 1, b: 1, a: 1}
-    mass: 6
-  - spawnTime: 0.1
-    spriteType: 2
-    health: 70
-    speed: 3.5
-    scale: 0.5
-    color: {r: 0.7075472, g: 0.5700427, b: 0.5700427, a: 1}
-    mass: 6
-  - spawnTime: 1
-    spriteType: 2
-    health: 500
-    speed: 3
-    scale: 2
-    color: {r: 1, g: 0.37169808, b: 0.42921185, a: 1}
-    mass: 10
+  - mobs:
+    - {fileID: 11400000, guid: 11694a99ed4110c46a210e2e9be3b7e5, type: 2}
+    percentage: 00000000
+    spawnTime: 0.5
+  - mobs:
+    - {fileID: 11400000, guid: 11694a99ed4110c46a210e2e9be3b7e5, type: 2}
+    - {fileID: 11400000, guid: 03bc225838323e54d8cca56bdbeb7bf3, type: 2}
+    percentage: 000000000000000001000000
+    spawnTime: 0.4
+  - mobs:
+    - {fileID: 11400000, guid: 11694a99ed4110c46a210e2e9be3b7e5, type: 2}
+    - {fileID: 11400000, guid: 03bc225838323e54d8cca56bdbeb7bf3, type: 2}
+    - {fileID: 11400000, guid: b2e12b757e0e5e540bdb9e9834a78433, type: 2}
+    percentage: 000000000000000001000000010000000100000002000000
+    spawnTime: 0.4
+  - mobs:
+    - {fileID: 11400000, guid: 03bc225838323e54d8cca56bdbeb7bf3, type: 2}
+    - {fileID: 11400000, guid: 5cbde870c1f4d1f41b1979ca12a02c3a, type: 2}
+    percentage: 000000000100000001000000
+    spawnTime: 0.4
+  - mobs: []
+    percentage: 
+    spawnTime: 0.3
+  - mobs: []
+    percentage: 
+    spawnTime: 0.3
+  - mobs: []
+    percentage: 
+    spawnTime: 0.3
+  - mobs: []
+    percentage: 
+    spawnTime: 0.2
+  - mobs: []
+    percentage: 
+    spawnTime: 0.1
+  - mobs: []
+    percentage: 
+    spawnTime: 0.1
   levelTime: 0
 --- !u!1 &953605934
 GameObject:

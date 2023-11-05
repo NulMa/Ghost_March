@@ -9,16 +9,14 @@ public class MobData : ScriptableObject {
 
     [Header("# Main Info")]
     public MobType mobType;
-    public int mobId;
-    public string mobDesc;
+    public Color color;
 
 
     [Header("# Level Data")]
-    public int SpriteType;
+    public int spriteType;
     public float health;
     public float speed;
     public float scale;
-    public Color color;
     public float mass;
     public float exp;
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.U2D.Path;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour{
@@ -29,14 +30,22 @@ public class Spawner : MonoBehaviour{
     void Spawn() {
         GameObject enemy = GameManager.instance.pool.Get(0);
         enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
-        enemy.GetComponent<Enemy>().Init(spawnData[level]);
+
+        //spawn type by perentage
+        int per = Random.Range(0, spawnData[level].percentage.Length);
+
+        enemy.GetComponent<Enemy>().Init(spawnData[level].mobs[spawnData[level].percentage[per]]);
     }
 }
 
 [System.Serializable] // 퍼블릭 참조용
 public class SpawnData {
-    public float spawnTime;
 
+    public MobData[] mobs;
+    public int[] percentage;
+
+    public float spawnTime;
+    /*
     public int spriteType;
     public int health;
     public float speed;
@@ -44,4 +53,5 @@ public class SpawnData {
     public float scale;
     public Color color;
     public int mass;
+    */
 }

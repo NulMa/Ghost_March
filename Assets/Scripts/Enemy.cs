@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour{
 
     }
 
-    public void Init(SpawnData data) {
+    public void Init(MobData data) {
         anim.runtimeAnimatorController = animCon[data.spriteType];
         spriteType = data.spriteType;
         speed = data.speed;
