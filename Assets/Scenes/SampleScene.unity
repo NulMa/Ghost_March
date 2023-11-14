@@ -13436,18 +13436,27 @@ MonoBehaviour:
   - mobs: []
     percentage: 
     spawnTime: 0.3
-  - mobs: []
+  - mobs:
+    - {fileID: 11400000, guid: 5cbde870c1f4d1f41b1979ca12a02c3a, type: 2}
+    - {fileID: 11400000, guid: f410917a4ef613d469a9abdb9c457547, type: 2}
+    percentage: 000000000000000001000000
+    spawnTime: 0.3
+  - mobs:
+    - {fileID: 11400000, guid: 5cbde870c1f4d1f41b1979ca12a02c3a, type: 2}
+    - {fileID: 11400000, guid: f410917a4ef613d469a9abdb9c457547, type: 2}
+    percentage: 0000000001000000
+    spawnTime: 0.3
+  - mobs:
+    - {fileID: 11400000, guid: 5cbde870c1f4d1f41b1979ca12a02c3a, type: 2}
+    - {fileID: 11400000, guid: f410917a4ef613d469a9abdb9c457547, type: 2}
+    - {fileID: 11400000, guid: 30f0f35b633f4a34e980245172ed4898, type: 2}
+    percentage: 0000000000000000010000000100000002000000
+    spawnTime: 0.3
+  - mobs:
+    - {fileID: 11400000, guid: f410917a4ef613d469a9abdb9c457547, type: 2}
+    - {fileID: 0}
     percentage: 
     spawnTime: 0.3
-  - mobs: []
-    percentage: 
-    spawnTime: 0.3
-  - mobs: []
-    percentage: 
-    spawnTime: 0.2
-  - mobs: []
-    percentage: 
-    spawnTime: 0.1
   - mobs: []
     percentage: 
     spawnTime: 0.1

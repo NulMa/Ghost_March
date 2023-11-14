@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 927177f04ddcddd4f826dbbbcda407ef, type: 3}
-  m_Name: egg Boss
+  m_Name: ghost Elite
   m_EditorClassIdentifier: 
-  mobType: 2
-  color: {r: 1, g: 0.75849056, b: 0.75849056, a: 1}
-  spriteType: 1
-  health: 400
-  speed: 2
-  scale: 2
-  mass: 8
+  mobType: 0
+  color: {r: 0.82883906, g: 0.44716978, b: 1, a: 1}
+  spriteType: 2
+  health: 100
+  speed: 2.7
+  scale: 0.5
+  mass: 6
   exp: 1
