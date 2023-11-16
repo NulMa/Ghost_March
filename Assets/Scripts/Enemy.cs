@@ -101,7 +101,7 @@ public class Enemy : MonoBehaviour{
 
             souls.transform.position = this.transform.position;
 
-            GameManager.instance.GetExp();
+            //GameManager.instance.GetExp();
             if(GameManager.instance.isLive)
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead, 0);
         }
