@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour{
 
         enemy.GetComponent<Enemy>().Init(spawnData[level].mobs[spawnData[level].percentage[per]]);
     }
-}
+}   
 
 [System.Serializable] // 퍼블릭 참조용
 public class SpawnData {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class Enemy : MonoBehaviour{
     public float speed;
@@ -9,6 +10,7 @@ public class Enemy : MonoBehaviour{
     public float scale;
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
+    public GameObject soul;
 
     public int spriteType;
 
@@ -93,6 +95,12 @@ public class Enemy : MonoBehaviour{
             spriter.sortingOrder = 1;
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
+
+
+            GameObject souls =  Instantiate(soul);
+
+            souls.transform.position = this.transform.position;
+
             GameManager.instance.GetExp();
             if(GameManager.instance.isLive)
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead, 0);
