@@ -18,7 +18,7 @@ public class Souls : MonoBehaviour
         if (!GameManager.instance.isLive)
             return;
 
-        if (Vector3.Distance(target.position, rigid.position) > 5)
+        if (Vector3.Distance(target.position, rigid.position) > 2)
             return;
 
         Vector2 dirVec = target.position - rigid.position;
