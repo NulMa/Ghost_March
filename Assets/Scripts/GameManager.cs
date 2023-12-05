@@ -125,4 +125,18 @@ public class GameManager : MonoBehaviour{
         Time.timeScale = 1;
         uiJoy.localScale = Vector3.one;
     }
+
+    public void PauseStop() {
+        isLive = false;
+        Time.timeScale = 0;
+        uiJoy.localScale = Vector3.zero;
+
+
+    }
+
+    public void PauseResume() {
+        isLive = true;
+        Time.timeScale = 1;
+        uiJoy.localScale = Vector3.one;
+    }
 }
