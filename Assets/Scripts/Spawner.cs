@@ -28,13 +28,31 @@ public class Spawner : MonoBehaviour{
     }
 
     void Spawn() {
+
         GameObject enemy = GameManager.instance.pool.Get(0);
         enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
+
+        Vector3 pos = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
 
         //spawn type by perentage
         int per = Random.Range(0, spawnData[level].percentage.Length);
 
         enemy.GetComponent<Enemy>().Init(spawnData[level].mobs[spawnData[level].percentage[per]]);
+
+        Debug.Log(spawnData[level].mobs[spawnData[level].percentage[per]].mobType);
+
+        if(spawnData[level].mobs[spawnData[level].percentage[per]].mobType == MobData.MobType.swarm) {
+            
+            for (int i = 0; i < 10; i++) {
+
+                enemy = GameManager.instance.pool.Get(0);
+
+                int ranx = Random.Range(-5, 5);
+                int rany = Random.Range(-5, 5);
+                enemy.transform.position = pos - new Vector3(ranx*0.1f, rany*0.1f, 0);
+                enemy.GetComponent<Enemy>().Init(spawnData[level].mobs[spawnData[level].percentage[per]]);
+            }
+        }
     }
 }   
 

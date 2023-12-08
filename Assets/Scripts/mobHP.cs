@@ -19,11 +19,8 @@ public class mobHP : MonoBehaviour{
     private void LateUpdate() {
         float curHealth = GetComponentInParent<Enemy>().health;
         float maxHealth = GetComponentInParent<Enemy>().maxHealth;
-        
-        mobSlider.value = curHealth / maxHealth;
 
-        Debug.Log("slider : " + mobSlider.value);
-        Debug.Log("cur : " + curHealth + "//   max : " + maxHealth);
+        mobSlider.value = curHealth / maxHealth;
     }
 
 

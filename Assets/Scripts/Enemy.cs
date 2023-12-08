@@ -82,6 +82,9 @@ public class Enemy : MonoBehaviour{
             return;
 
         health -= collision.GetComponent<Bullet>().damage;
+        /*
+         데미지 표기 로직 작성
+        */
         StartCoroutine(knockBack());
 
         if(health > 0) {
