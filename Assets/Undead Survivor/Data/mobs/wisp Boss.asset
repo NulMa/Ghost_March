@@ -19,4 +19,4 @@ MonoBehaviour:
   speed: 1
   scale: 2
   mass: 6
-  exp: 1
+  exp: 5

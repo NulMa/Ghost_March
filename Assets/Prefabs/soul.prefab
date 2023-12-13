@@ -121,9 +121,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc621e0da8a97940b1e41ce455228cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
   target: {fileID: 0}
   speed: 4
   range: 2
+  exp: 0
+  color:
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 1, g: 1, b: 0, a: 0}
 --- !u!50 &-4043509789603221871
 Rigidbody2D:
   serializedVersion: 4

@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static Cinemachine.DocumentationSortingAttribute;
@@ -8,9 +8,12 @@ public class Enemy : MonoBehaviour{
     public float health;
     public float maxHealth;
     public float scale;
+    public float exp;
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
     public GameObject soul;
+    public GameObject hudDamageText;
+    public Transform hudPos;
 
     public int spriteType;
 
@@ -43,21 +46,13 @@ public class Enemy : MonoBehaviour{
             chaseLogic(true);
         }
         else {
-            if(Vector2.Distance(target.position, rigid.position) < 5) {
+            if(Vector2.Distance(target.position, rigid.position) < 7) { //추적 중단 거리
                 chaseLogic(false);
             }
             else {
                 chaseLogic(true);
             }
         }
-
-
-        /*
-        Vector2 dirVec = target.position - rigid.position;
-        Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime; //*************
-        rigid.MovePosition(rigid.position + nextVec);
-        */
-
 
         //플레이어 충돌시 밀리지 않게 
         rigid.velocity = Vector2.zero;
@@ -114,16 +109,19 @@ public class Enemy : MonoBehaviour{
         transform.localScale = new Vector3(scale, scale, scale);
         spriter.color = data.color;
         rigid.mass = data.mass;
+        exp = data.exp;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (!collision.CompareTag("Bullet") || !isLive)
             return;
 
+
+        GameObject HudText = Instantiate(hudDamageText);
+        HudText.transform.position = hudPos.position;
+        HudText.GetComponent<DamageText>().damage = collision.GetComponent<Bullet>().damage;
         health -= collision.GetComponent<Bullet>().damage;
-        /*
-         데미지 표기 로직 작성
-        */
+
         StartCoroutine(knockBack());
 
         if(health > 0) {
@@ -140,6 +138,7 @@ public class Enemy : MonoBehaviour{
 
 
             GameObject souls =  Instantiate(soul);
+            souls.GetComponent<Souls>().exp = exp;
 
             souls.transform.position = this.transform.position;
 

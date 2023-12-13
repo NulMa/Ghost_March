@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour{
     public float maxHealth = 100;
     public int level;
     public int kill;
-    public int exp;
+    public float exp;
     public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
 
     [Header("# Game Object")]
@@ -102,12 +102,12 @@ public class GameManager : MonoBehaviour{
         }
     }
 
-    public void GetExp() {
+    public void GetExp(float value) {
         if (!isLive)
             return;
 
-        exp++;
-        if(exp == nextExp[Mathf.Min(level, nextExp.Length-1)]) {
+        exp += value;
+        if(exp >= nextExp[Mathf.Min(level, nextExp.Length-1)]) {
             level++;
             exp = 0;
             uiLevelUp.Show();   
