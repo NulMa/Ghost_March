@@ -15,8 +15,8 @@ MonoBehaviour:
   mobType: 0
   color: {r: 1, g: 1, b: 1, a: 1}
   spriteType: 2
-  health: 70
-  speed: 2.5
+  health: 200
+  speed: 1.5
   scale: 0.5
   mass: 6
   exp: 1

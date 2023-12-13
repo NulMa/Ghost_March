@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: wisp
   m_EditorClassIdentifier: 
   mobType: 0
-  mobId: 0
-  mobDesc: 
+  color: {r: 1, g: 1, b: 1, a: 1}
   spriteType: 0
-  health: 10
+  health: 20
   speed: 1.5
   scale: 0.5
-  color: {r: 1, g: 1, b: 1, a: 1}
   mass: 3
   exp: 1

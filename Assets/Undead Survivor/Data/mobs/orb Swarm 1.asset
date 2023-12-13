@@ -18,5 +18,5 @@ MonoBehaviour:
   health: 4
   speed: 5
   scale: 0.5
-  mass: 1
+  mass: 1000
   exp: 0.1

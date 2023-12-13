@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: wisp Elite
   m_EditorClassIdentifier: 
   mobType: 0
+  color: {r: 0.82883906, g: 0.44716978, b: 1, a: 1}
   spriteType: 0
-  health: 15
+  health: 50
   speed: 1.5
   scale: 0.5
-  color: {r: 0.82883906, g: 0.44716978, b: 1, a: 1}
   mass: 3
   exp: 1
