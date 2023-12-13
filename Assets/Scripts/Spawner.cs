@@ -39,8 +39,6 @@ public class Spawner : MonoBehaviour{
 
         enemy.GetComponent<Enemy>().Init(spawnData[level].mobs[spawnData[level].percentage[per]]);
 
-        Debug.Log(spawnData[level].mobs[spawnData[level].percentage[per]].mobType);
-
         if(spawnData[level].mobs[spawnData[level].percentage[per]].mobType == MobData.MobType.swarm) {
             
             for (int i = 0; i < 10; i++) {

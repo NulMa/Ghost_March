@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 927177f04ddcddd4f826dbbbcda407ef, type: 3}
-  m_Name: wisp swarm testing
+  m_Name: orb Swarm 3
   m_EditorClassIdentifier: 
-  mobType: 0
-  mobId: 0
-  mobDesc: 
-  spriteType: 0
-  health: 10
-  speed: 1.5
+  mobType: 1
+  color: {r: 0, g: 0, b: 0, a: 1}
+  spriteType: 3
+  health: 12
+  speed: 7
   scale: 0.5
-  color: {r: 1, g: 1, b: 1, a: 1}
-  mass: 3
+  mass: 1
   exp: 1

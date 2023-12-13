@@ -330,6 +330,7 @@ MonoBehaviour:
   - {fileID: 9100000, guid: fe417648e61746146aa34820d50b3b5d, type: 2}
   - {fileID: 22100000, guid: 45eccf19d3aa09c428b9c70970d03361, type: 2}
   - {fileID: 22100000, guid: a7472856f8b05f84bba18e0588c4630d, type: 2}
+  - {fileID: 22100000, guid: 052766f445898f84287f7d57fcac5125, type: 2}
   target: {fileID: 0}
   soul: {fileID: 3958643577827335626, guid: 6eab1a6dd2019404b842356fa7b40e15, type: 3}
   spriteType: 0

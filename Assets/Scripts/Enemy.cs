@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour{
 
     public int spriteType;
 
+    public Vector2 tempDir;
+
     bool isLive;
 
     Rigidbody2D rigid;
@@ -36,12 +38,49 @@ public class Enemy : MonoBehaviour{
         if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))//죽었으면 실행X
             return;
 
+
+        if(spriteType != 3) {
+            chaseLogic(true);
+        }
+        else {
+            if(Vector2.Distance(target.position, rigid.position) < 5) {
+                chaseLogic(false);
+            }
+            else {
+                chaseLogic(true);
+            }
+        }
+
+
+        /*
         Vector2 dirVec = target.position - rigid.position;
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime; //*************
         rigid.MovePosition(rigid.position + nextVec);
-        
+        */
+
+
         //플레이어 충돌시 밀리지 않게 
         rigid.velocity = Vector2.zero;
+    }
+
+    public void chaseLogic(bool onoff) {
+        
+
+
+
+        if (onoff == true) {
+            Vector2 dirVec = target.position - rigid.position;
+            Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime; //*************
+            rigid.MovePosition(rigid.position + nextVec);
+            tempDir = dirVec;
+        }
+
+        // near distance, static diraction
+        else {
+            Vector2 nextVec = tempDir.normalized * speed * Time.fixedDeltaTime; //*************
+            rigid.MovePosition(rigid.position + nextVec);   
+        }
+        
     }
 
     private void LateUpdate() {
