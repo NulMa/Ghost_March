@@ -9,6 +9,7 @@ public class Player : MonoBehaviour{
     public Scanner scanner;
     public Hand[] hands;
     public RuntimeAnimatorController[] animCon;
+    public bool isHit = false;
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
@@ -50,11 +51,26 @@ public class Player : MonoBehaviour{
         }
     }
 
+
+    public IEnumerator PlayerDamaged() {
+        isHit = true;
+        spriter.color = new Color(255, 0, 0, 0.7f);
+        yield return new WaitForSeconds(0.2f);
+        spriter.color = new Color(255, 255, 255, 1);
+        isHit = false;  
+    }
+
+
+
     private void OnCollisionStay2D(Collision2D collision) {
         if (!GameManager.instance.isLive)
             return;
 
         GameManager.instance.health -= Time.deltaTime * 10f;
+        if (isHit == false) {
+            StartCoroutine(PlayerDamaged());
+        }
+        
 
         if(GameManager.instance.health < 0) {
             for(int index = 2; index < transform.childCount; index++) {
