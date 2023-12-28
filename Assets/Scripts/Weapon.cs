@@ -87,7 +87,7 @@ public class Weapon : MonoBehaviour{
                 Batch();
                 break;
             case 1:
-                speed = 0.3f * Character.WeaponRate;
+                speed = 0.2f * Character.WeaponRate;
                 break;
 
             case 5:
