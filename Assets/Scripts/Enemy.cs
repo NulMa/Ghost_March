@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour{
             return;
 
 
-        if(spriteType != 3) {
+        if(spriteType != 3 ) {  //3 = swarm type
             chaseLogic(true);
         }
         else {
@@ -100,6 +100,8 @@ public class Enemy : MonoBehaviour{
     }
 
     public void Init(MobData data) {
+        this.gameObject.layer = 6;
+        spriter.sortingOrder = 2;
         anim.runtimeAnimatorController = animCon[data.spriteType];
         spriteType = data.spriteType;
         speed = data.speed;
@@ -110,6 +112,12 @@ public class Enemy : MonoBehaviour{
         spriter.color = data.color;
         rigid.mass = data.mass;
         exp = data.exp;
+
+        if (spriteType == 3) {
+            this.gameObject.layer = 7;
+            spriter.sortingOrder = 3;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
