@@ -1,5 +1,6 @@
     using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using static Cinemachine.DocumentationSortingAttribute;
 
@@ -12,6 +13,7 @@ public class Enemy : MonoBehaviour{
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
     public GameObject soul;
+    public GameObject smallHeal;
     public GameObject hudDamageText;
     public Transform hudPos;
 
@@ -144,11 +146,23 @@ public class Enemy : MonoBehaviour{
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
 
+            int spawnHeal = Random.Range(0, 100);
 
-            GameObject souls =  Instantiate(soul);
-            souls.GetComponent<Souls>().exp = exp;
+            Debug.Log(spawnHeal);
 
-            souls.transform.position = this.transform.position;
+            if(spawnHeal <= 5) {
+                GameObject souls = Instantiate(soul);
+
+                souls.GetComponent<Souls>().exp = exp;
+
+                souls.transform.position = this.transform.position;
+            }
+            else {
+                GameObject sHeal = Instantiate(smallHeal);
+
+                sHeal.transform.position = this.transform.position;
+            }
+
 
             //GameManager.instance.GetExp();
             if(GameManager.instance.isLive)

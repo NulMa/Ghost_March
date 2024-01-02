@@ -6,6 +6,7 @@ public class Souls : MonoBehaviour
 {
     public SpriteRenderer spriter;
     public Rigidbody2D target;
+    public bool isHeal;
     public float speed;
     public float range;
     Rigidbody2D rigid;
@@ -42,7 +43,18 @@ public class Souls : MonoBehaviour
         if (collision.tag != "Player")
             return;
 
-        GameManager.instance.GetExp(exp);
+        if(isHeal != true) {
+            GameManager.instance.GetExp(exp);
+        }
+        else {
+            if(GameManager.instance.health > GameManager.instance.maxHealth - 10) {
+                GameManager.instance.health = GameManager.instance.maxHealth;
+            }
+            else {
+                GameManager.instance.health = GameManager.instance.health + 10;
+            }
+            
+        }
         gameObject.SetActive(false);
     }
 
