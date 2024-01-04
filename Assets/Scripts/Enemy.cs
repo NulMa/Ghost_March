@@ -148,9 +148,9 @@ public class Enemy : MonoBehaviour{
 
             int spawnHeal = Random.Range(0, 100);
 
-            Debug.Log(spawnHeal);
+            
 
-            if(spawnHeal <= 5) {
+            if(spawnHeal <= 96) {
                 GameObject souls = Instantiate(soul);
 
                 souls.GetComponent<Souls>().exp = exp;
@@ -158,6 +158,7 @@ public class Enemy : MonoBehaviour{
                 souls.transform.position = this.transform.position;
             }
             else {
+                Debug.Log(spawnHeal);
                 GameObject sHeal = Instantiate(smallHeal);
 
                 sHeal.transform.position = this.transform.position;
