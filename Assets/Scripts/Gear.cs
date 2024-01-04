@@ -44,15 +44,22 @@ public class Gear : MonoBehaviour{
                     weapon.speed = speed + (speed * rate);
                     break;
 
+                case 1:
+                    speed = 0.5f * Character.WeaponRate;
+                    weapon.speed = speed * (1f - rate);
+                    break;
+
                 case 5:
                     speed = 5f * Character.WeaponRate;
                     weapon.speed = speed * (1f - rate);
                     break;
 
-                default:
-                    speed = 0.5f * Character.WeaponRate;
+                case 6:
+                    speed = 3f * Character.WeaponRate;
                     weapon.speed = speed * (1f - rate);
                     break;
+
+
             }
         }
     }

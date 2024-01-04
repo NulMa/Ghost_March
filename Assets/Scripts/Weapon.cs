@@ -30,8 +30,15 @@ public class Weapon : MonoBehaviour{
                     timer = 0f;
                     AudioManager.instance.PlaySfx(AudioManager.Sfx.Melee, 0);
                 }
+                break;
 
-                
+            case 1:
+                timer += Time.deltaTime;
+
+                if (timer > speed) {
+                    timer = 0f;
+                    Fire();
+                }
                 break;
 
             case 5:
@@ -43,14 +50,16 @@ public class Weapon : MonoBehaviour{
                 }
                 break;
 
-            default:
+            case 6:
                 timer += Time.deltaTime;
 
-                if(timer > speed) {
+                if (timer > speed) {
                     timer = 0f;
                     Fire();
                 }
                 break;
+
+
         }
     }
     public void LevelUp(float damage, int count) {
@@ -59,6 +68,8 @@ public class Weapon : MonoBehaviour{
 
         if (id == 0)
             Batch();
+
+
 
         player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
@@ -82,20 +93,23 @@ public class Weapon : MonoBehaviour{
         }
 
         switch (id) {
-            case 0:
+            case 0: //shilver bell
                 speed = 150 * Character.WeaponSpeed;
                 Batch();
                 break;
-            case 1:
+            case 1: // charm
                 speed = 0.5f * Character.WeaponRate;
                 break;
 
-            case 5:
+            case 5: // Vajra
                 speed = 5f * Character.WeaponRate;
                 break;
 
+            case 6: // horse bow
+                speed = 3f * Character.WeaponRate;
+                break;
 
-      
+
         }
         //hand setting
         /*
@@ -135,6 +149,8 @@ public class Weapon : MonoBehaviour{
 
         if (!player.scanner.nearestTarget)
             return;
+
+
         Vector3 targetPos = player.scanner.nearestTarget.position;
         Vector3 dir = targetPos - transform.position;
         dir = dir.normalized;
@@ -143,6 +159,27 @@ public class Weapon : MonoBehaviour{
         bullet.position = transform.position;
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
+
+
+        /*
+        if (id == 6) {
+            for(int i=0; i < count/2; i++) {
+                Debug.Log("add");
+                Transform bulletRight = GameManager.instance.pool.Get(prefabId).transform;
+                Transform bulletLeft = GameManager.instance.pool.Get(prefabId).transform;
+
+                bulletRight.position = transform.position;
+                bulletLeft.position = transform.position;
+
+                bulletRight.rotation = Quaternion.FromToRotation(Vector3.up, dir - new Vector3(0.5f * i, 0, 0));
+                bulletLeft.rotation = Quaternion.FromToRotation(Vector3.up, dir + new Vector3(0.5f * i, 0, 0));
+
+                bulletRight.GetComponent<Bullet>().Init(damage, count, dir - new Vector3(0.5f * i, 0, 0));
+                bulletLeft.GetComponent<Bullet>().Init(damage, count, dir + new Vector3(0.5f * i, 0, 0));
+            }
+        }
+        */
+
 
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Range, 0);
     }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour{
     public float damage;
     public int per;
+    public bool isInf;
 
     Rigidbody2D rigid;
 
@@ -22,11 +23,11 @@ public class Bullet : MonoBehaviour{
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if ((!collision.CompareTag("Enemy") && !collision.CompareTag("Swarm")) || per == -100 )
+        if ((!collision.CompareTag("Enemy") || !collision.CompareTag("Swarm")) || per == -100 )
             return;
         per--;
-        
-        if(per < 0) {
+
+        if (per < 0 && isInf != true) {
             rigid.velocity = Vector2.zero;
             gameObject.SetActive(false);
         }
