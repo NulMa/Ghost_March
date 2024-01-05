@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,7 +29,7 @@ public class Weapon : MonoBehaviour{
 
                 if (timer > 1 - (speed * 0.001f)) {
                     timer = 0f;
-                    AudioManager.instance.PlaySfx(AudioManager.Sfx.Melee, 0);
+                    //AudioManager.instance.PlaySfx(AudioManager.Sfx.Melee, 0);
                 }
                 break;
 
@@ -151,9 +152,10 @@ public class Weapon : MonoBehaviour{
             return;
 
 
-        Vector3 targetPos = player.scanner.nearestTarget.position;
-        Vector3 dir = targetPos - transform.position;
-        dir = dir.normalized;
+        Vector3 targetPos = player.scanner.nearestTarget.position; //target
+        Vector3 dir = targetPos - transform.position; // target vector
+
+        dir = dir.normalized; // normalized target vector
 
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.position = transform.position;
@@ -161,26 +163,33 @@ public class Weapon : MonoBehaviour{
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
 
 
-        /*
-        if (id == 6) {
+
+        // arrow multply
+             if (id == 6) {
             for(int i=0; i < count/2; i++) {
-                Debug.Log("add");
+                
                 Transform bulletRight = GameManager.instance.pool.Get(prefabId).transform;
                 Transform bulletLeft = GameManager.instance.pool.Get(prefabId).transform;
+                bulletRight.transform.parent = bullet;
+                bulletLeft.transform.parent = bullet;
 
-                bulletRight.position = transform.position;
-                bulletLeft.position = transform.position;
 
-                bulletRight.rotation = Quaternion.FromToRotation(Vector3.up, dir - new Vector3(0.5f * i, 0, 0));
-                bulletLeft.rotation = Quaternion.FromToRotation(Vector3.up, dir + new Vector3(0.5f * i, 0, 0));
+                bulletRight.localPosition = new Vector3(0.5f * (i + 1), 0, 0);
+                bulletLeft.localPosition = new Vector3(-0.5f * (i + 1), 0, 0);
 
-                bulletRight.GetComponent<Bullet>().Init(damage, count, dir - new Vector3(0.5f * i, 0, 0));
-                bulletLeft.GetComponent<Bullet>().Init(damage, count, dir + new Vector3(0.5f * i, 0, 0));
+                Vector3 rotVecRight = Vector3.forward;// * 15 * (i + 1);
+                Vector3 rotVecLeft = Vector3.forward;// * 15 * -(i + 1);
+
+                bulletRight.rotation = Quaternion.FromToRotation(Vector3.up, dir);
+                bulletLeft.rotation = Quaternion.FromToRotation(Vector3.up, dir);
+
+                bulletRight.Rotate(rotVecRight);    
+                bulletLeft.Rotate(rotVecLeft);
+
+                bulletRight.GetComponent<Bullet>().Init(damage, count, dir + rotVecRight);
+                bulletLeft.GetComponent<Bullet>().Init(damage, count, dir + rotVecLeft);
             }
         }
-        */
-
-
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Range, 0);
     }
 
