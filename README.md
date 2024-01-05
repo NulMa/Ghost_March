@@ -10,7 +10,7 @@
 
 - 현재 버전
 
-	- Ghost_March_Alpha 0.29.apk (2023. 12. 07)
+	- Ghost_March_Alpha 0.35.apk (2024. 1. 05)
 
 - 제작기간
 
