@@ -54,7 +54,7 @@ public class Player : MonoBehaviour{
 
     public IEnumerator PlayerDamaged() {
         isHit = true;
-        spriter.color = new Color(255, 0, 0, 0.7f);
+        spriter.color = new Color(255, 0, 0, 0.6f);
         yield return new WaitForSeconds(0.2f);
         spriter.color = new Color(255, 255, 255, 1);
         isHit = false;  

@@ -60,6 +60,18 @@ public class Weapon : MonoBehaviour{
                 }
                 break;
 
+            case 7:
+                transform.Rotate(Vector3.back * speed * Time.deltaTime);
+
+                timer += Time.deltaTime;
+
+                if (timer > speed) {
+                    timer = 0f;
+                    Slash();
+                }
+                break;
+
+
 
         }
     }
@@ -110,6 +122,11 @@ public class Weapon : MonoBehaviour{
                 speed = 3f * Character.WeaponRate;
                 break;
 
+            case 7: //Straw cutter
+                speed = 0.5f * Character.WeaponSpeed;
+                Slash();
+                break;
+
 
         }
         //hand setting
@@ -146,8 +163,21 @@ public class Weapon : MonoBehaviour{
         }
     }
 
-    void Fire() {
+    void Slash() {
+        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
 
+        if (!bullet.gameObject.activeSelf)
+            bullet.gameObject.SetActive(true);
+
+        bullet.localPosition = Vector3.zero;
+        bullet.parent = transform;
+
+        bullet.GetComponent<Bullet>().Init(damage, -100, Vector3.zero); // -100 IS INF PER.
+    }
+
+
+    void Fire() {
+            
         if (!player.scanner.nearestTarget)
             return;
 

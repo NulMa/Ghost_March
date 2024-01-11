@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour{
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if ((!collision.CompareTag("Enemy") || !collision.CompareTag("Swarm")) || per == -100 )
+        if (!collision.CompareTag("Enemy") || !collision.CompareTag("Swarm") || per == -100 )
             return;
         per--;
 
@@ -32,6 +32,7 @@ public class Bullet : MonoBehaviour{
             gameObject.SetActive(false);
         }
     }
+
 
     private void OnTriggerExit2D(Collider2D collision) {
         if (!collision.CompareTag("Area") || per == -100)
