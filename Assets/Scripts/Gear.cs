@@ -60,7 +60,7 @@ public class Gear : MonoBehaviour{
                     break;
 
                 case 7:
-                    speed = 0.5f * Character.WeaponRate;
+                    speed = 2.5f * Character.WeaponRate;
                     weapon.speed = speed * (1f - rate);
                     break;
 

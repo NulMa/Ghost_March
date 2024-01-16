@@ -130,6 +130,7 @@ public class Enemy : MonoBehaviour{
         GameObject HudText = Instantiate(hudDamageText);
         HudText.transform.position = hudPos.position;
         HudText.GetComponent<DamageText>().damage = collision.GetComponent<Bullet>().damage;
+
         health -= collision.GetComponent<Bullet>().damage;
 
         StartCoroutine(knockBack());

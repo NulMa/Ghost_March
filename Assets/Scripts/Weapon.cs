@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Weapon : MonoBehaviour{
     public int id;
@@ -10,7 +12,10 @@ public class Weapon : MonoBehaviour{
     public int count;
     public float speed;
 
+    public int slashAngle = 0;
+
     float timer;
+    float RotAng;
     Player player;
 
     private void Awake() {
@@ -61,7 +66,7 @@ public class Weapon : MonoBehaviour{
                 break;
 
             case 7:
-                transform.Rotate(Vector3.back * speed * Time.deltaTime);
+                //transform.Rotate(Vector3.back * speed * Time.deltaTime);
 
                 timer += Time.deltaTime;
 
@@ -123,7 +128,7 @@ public class Weapon : MonoBehaviour{
                 break;
 
             case 7: //Straw cutter
-                speed = 0.5f * Character.WeaponSpeed;
+                speed = 2.5f * Character.WeaponSpeed;
                 Slash();
                 break;
 
@@ -169,10 +174,32 @@ public class Weapon : MonoBehaviour{
         if (!bullet.gameObject.activeSelf)
             bullet.gameObject.SetActive(true);
 
+        int CritHit = 1;
+        int Crit = UnityEngine.Random.Range(0, 100);
+
+        if(Crit < count) {
+            CritHit = 2;
+            bullet.localScale = new Vector3(2.5f, 2.5f, 2.5f);
+        }
+        else {
+            CritHit = 1;
+            bullet.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        }
+
+
+        bullet.GetComponent<Bullet>().Init(damage * CritHit, -100, Vector3.zero); // -100 IS INF PER.
+
         bullet.localPosition = Vector3.zero;
         bullet.parent = transform;
 
-        bullet.GetComponent<Bullet>().Init(damage, -100, Vector3.zero); // -100 IS INF PER.
+        if (player.inputVec != Vector2.zero) {
+            RotAng = MathF.Atan2(player.inputVec.y, player.inputVec.x) * Mathf.Rad2Deg;
+        }
+        
+
+
+        bullet.eulerAngles = new Vector3(0, 0, RotAng - 90);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Melee, 0);
     }
 
 
