@@ -1,16 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour{
     //정적 변수 선언 = 즉시 클래스에서 호출 가능
     public static GameManager instance;
+    
     [Header("# Game Control")]
     public bool isLive;
     public float gameTime;
     public float maxGameTime = 2* 10f;
+
+    private Touch touch;
 
     [Header("# Player Info")]
     public int playerId;
@@ -26,13 +31,37 @@ public class GameManager : MonoBehaviour{
     public Player player;
     public LevelUp uiLevelUp;
     public Result uiResult;
-    public Transform uiJoy;
+    public RectTransform uiJoy;
     public GameObject enemyCleaner; 
 
     private void Awake() {
         instance = this;
         Application.targetFrameRate = 60;
+
     }
+
+    public void LateUpdate() {
+
+        if(Input.touchCount > 0) {
+            touch = Input.GetTouch(0);
+            switch (touch.phase) {
+                case TouchPhase.Began:
+                    //uiJoy.localScale = Vector3.one;
+                    uiJoy.position = touch.position;
+                    
+                    Debug.Log("Began : " + touch.position);
+                    break;
+
+                case TouchPhase.Ended:
+                case TouchPhase.Canceled:
+                    //uiJoy.transform.position = new Vector3(0, 5, 0);
+                    //uiJoy.localScale = Vector3.zero;
+                    Debug.Log("x");
+                    break;
+            }
+        }
+    }
+
     public void GameStart(int id) {
         playerId = id;
         health = maxHealth;
