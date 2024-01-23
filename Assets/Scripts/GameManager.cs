@@ -46,17 +46,18 @@ public class GameManager : MonoBehaviour{
             touch = Input.GetTouch(0);
             switch (touch.phase) {
                 case TouchPhase.Began:
-                    //uiJoy.localScale = Vector3.one;
                     uiJoy.position = touch.position;
-                    
-                    Debug.Log("Began : " + touch.position);
+                    touchStartPos = touch.position;
+                    break;
+
+                case TouchPhase.Moved:
+                    touchEndPos = touch.position;
+                    touchDirection = (touchEndPos - touchStartPos).normalized;
                     break;
 
                 case TouchPhase.Ended:
                 case TouchPhase.Canceled:
-                    //uiJoy.transform.position = new Vector3(0, 5, 0);
-                    //uiJoy.localScale = Vector3.zero;
-                    Debug.Log("x");
+                    touchDirection = Vector2.zero;
                     break;
             }
         }

@@ -1,0 +1,40 @@
+diff a/Assets/Scripts/GameManager.cs b/Assets/Scripts/GameManager.cs	(rejected hunks)
+@@ -31,13 +31,37 @@
+     public Player player;
+     public LevelUp uiLevelUp;
+     public Result uiResult;
+-    public Transform uiJoy;
++    public RectTransform uiJoy;
+     public GameObject enemyCleaner; 
+ 
+     private void Awake() {
+         instance = this;
+         Application.targetFrameRate = 60;
++
++    }
++
++    public void LateUpdate() {
++
++        if(Input.touchCount > 0) {
++            touch = Input.GetTouch(0);
++            switch (touch.phase) {
++                case TouchPhase.Began:
++                    //uiJoy.localScale = Vector3.one;
++                    uiJoy.position = touch.position;
++                    
++                    Debug.Log("Began : " + touch.position);
++                    break;
++
++                case TouchPhase.Ended:
++                case TouchPhase.Canceled:
++                    //uiJoy.transform.position = new Vector3(0, 5, 0);
++                    //uiJoy.localScale = Vector3.zero;
++                    Debug.Log("x");
++                    break;
++            }
++        }
+     }
++
+     public void GameStart(int id) {
+         playerId = id;
+         health = maxHealth;
