@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour{
+
     public Vector2 inputVec;
     public Scanner scanner;
     public Hand[] hands;
