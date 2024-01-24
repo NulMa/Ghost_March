@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour{
             touch = Input.GetTouch(0);
             switch (touch.phase) {
                 case TouchPhase.Began:
-                    uiJoy.localScale = Vector3.one;
                     uiJoy.position = touch.position;
                     touchStartPos = touch.position;
                     break;
@@ -54,16 +53,11 @@ public class GameManager : MonoBehaviour{
                 case TouchPhase.Moved:
                     touchEndPos = touch.position;
                     touchDirection = (touchEndPos - touchStartPos).normalized;
-
-                    float stickMoveRange = 10f; // ���̽�ƽ ��ƽ�� �̵� ������ ����
-                    uiJoy.GetChild(0).localPosition = new Vector3(touchDirection.x * stickMoveRange, touchDirection.y * stickMoveRange, 0);
                     break;
 
                 case TouchPhase.Ended:
                 case TouchPhase.Canceled:
                     touchDirection = Vector2.zero;
-                    //uiJoy.transform.position = new Vector3(0, 5, 0);
-                    uiJoy.localScale = Vector3.zero;
                     break;
             }
         }
