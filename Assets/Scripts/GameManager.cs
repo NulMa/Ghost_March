@@ -32,7 +32,11 @@ public class GameManager : MonoBehaviour{
     public LevelUp uiLevelUp;
     public Result uiResult;
     public RectTransform uiJoy;
-    public GameObject enemyCleaner; 
+    public GameObject enemyCleaner;
+
+    public Vector2 touchStartPos;
+    public Vector2 touchEndPos;
+    public Vector2 touchDirection;
 
     private void Awake() {
         instance = this;
@@ -55,7 +59,7 @@ public class GameManager : MonoBehaviour{
                     touchEndPos = touch.position;
                     touchDirection = (touchEndPos - touchStartPos).normalized;
 
-                    float stickMoveRange = 10f; // ï¿½ï¿½ï¿½Ì½ï¿½Æ½ ï¿½ï¿½Æ½ï¿½ï¿½ ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                    float stickMoveRange = 10f; // Á¶ÀÌ½ºÆ½ ½ºÆ½ÀÇ ÀÌµ¿ °¡´ÉÇÑ ¹üÀ§
                     uiJoy.GetChild(0).localPosition = new Vector3(touchDirection.x * stickMoveRange, touchDirection.y * stickMoveRange, 0);
                     break;
 

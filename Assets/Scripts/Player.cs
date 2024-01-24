@@ -33,7 +33,7 @@ public class Player : MonoBehaviour{
     void FixedUpdate() {
         if (!GameManager.instance.isLive)
             return;
-        Vector2 nextVec = inputVec * speed * Time.fixedDeltaTime;
+        Vector2 nextVec = GameManager.instance.touchDirection * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
     }
 
@@ -44,10 +44,10 @@ public class Player : MonoBehaviour{
     private void LateUpdate() {
         if (!GameManager.instance.isLive)
             return;
-        anim.SetFloat("Speed", inputVec.magnitude);
+        anim.SetFloat("Speed", GameManager.instance.touchDirection.magnitude);
 
-        if (inputVec.x != 0) {
-            spriter.flipX = inputVec.x < 0;
+        if (GameManager.instance.touchDirection.x != 0) {
+            spriter.flipX = GameManager.instance.touchDirection.x < 0;
         }
     }
 
