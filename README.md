@@ -5,6 +5,8 @@
 	- 한국 무속 신앙을 기반으로 한
 	뱀파이버 서바이벌 라이크 장르의 모바일 게임
 
+  	- 1인 제작
+
 	- APK 파일 다운로드 :
    		https://drive.google.com/drive/folders/1qbRwrNemT_Zs7Ug-0bk8C69Psq08Y6i6?usp=drive_link
 
