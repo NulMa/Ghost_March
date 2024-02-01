@@ -192,8 +192,8 @@ public class Weapon : MonoBehaviour{
         bullet.localPosition = Vector3.zero;
         bullet.parent = transform;
 
-        if (player.inputVec != Vector2.zero) {
-            RotAng = MathF.Atan2(player.inputVec.y, player.inputVec.x) * Mathf.Rad2Deg;
+        if (GameManager.instance.touchDirection != Vector2.zero) {
+            RotAng = MathF.Atan2(GameManager.instance.touchDirection.y, GameManager.instance.touchDirection.x) * Mathf.Rad2Deg;
         }
         
 

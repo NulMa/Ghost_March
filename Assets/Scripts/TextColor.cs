@@ -11,10 +11,10 @@ public class TextColor : MonoBehaviour
         pro = GetComponent<TextMeshPro>();
     }
     private void LateUpdate() {
-        if(int.Parse(pro.text) <= 20) { //white
+        if(float.Parse(pro.text) <= 20) { //white
             pro.color = new Color(255, 255, 255);
         }
-        else if (int.Parse(pro.text) >= 40) { // red
+        else if (float.Parse(pro.text) >= 40) { // red
             pro.color = new Color(255, 0, 0);
         }
         else { // yellow

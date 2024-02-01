@@ -50,12 +50,14 @@ public class GameManager : MonoBehaviour{
             touch = Input.GetTouch(0);
             switch (touch.phase) {
                 case TouchPhase.Began:
+                    uiJoy.SetAsFirstSibling();
                     uiJoy.localScale = Vector3.one;
                     uiJoy.position = touch.position;
                     touchStartPos = touch.position;
                     break;
 
                 case TouchPhase.Moved:
+                    uiJoy.SetAsFirstSibling();
                     touchEndPos = touch.position;
                     touchDirection = (touchEndPos - touchStartPos).normalized;
 
@@ -65,6 +67,7 @@ public class GameManager : MonoBehaviour{
 
                 case TouchPhase.Ended:
                 case TouchPhase.Canceled:
+                    uiJoy.SetAsFirstSibling();
                     touchDirection = Vector2.zero;
                     //uiJoy.transform.position = new Vector3(0, 5, 0);
                     uiJoy.localScale = Vector3.zero;
@@ -78,7 +81,7 @@ public class GameManager : MonoBehaviour{
         health = maxHealth;
 
         player.gameObject.SetActive(true);
-        uiLevelUp.Select(playerId % 2);
+        uiLevelUp.Select(0); //시작 무기 할당 // case 문으로 선택지 변경 가능
         Resume();
 
         AudioManager.instance.PlayBgm(true);

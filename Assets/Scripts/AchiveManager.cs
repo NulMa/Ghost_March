@@ -8,7 +8,7 @@ public class AchiveManager : MonoBehaviour{
     public GameObject[] unlockCharacter;
     public GameObject uiNotice;
 
-    enum Achive { UnlockMac, UnlockNina }
+    enum Achive { UnlockOrchid, UnlockChrysanthemum, UnlockBamboo }
     Achive[] achives;
     WaitForSecondsRealtime wait; 
 
@@ -53,11 +53,14 @@ public class AchiveManager : MonoBehaviour{
         bool isachive = false;
 
         switch (achive) {
-            case Achive.UnlockMac:
-                isachive = GameManager.instance.kill >= 10;
-                break;
-            case Achive.UnlockNina:
+            case Achive.UnlockOrchid:
                 isachive = GameManager.instance.gameTime == GameManager.instance.maxGameTime;
+                break;
+            case Achive.UnlockChrysanthemum:
+                isachive = GameManager.instance.health <= 0; //결재로 변경
+                break;
+            case Achive.UnlockBamboo:
+                //isachive = GameManager.instance.gameTime == GameManager.instance.maxGameTime;
                 break;
         }
 
