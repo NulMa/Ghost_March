@@ -5968,8 +5968,8 @@ Transform:
   m_GameObject: {fileID: 202997975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1779509353}
   m_RootOrder: 1
@@ -11642,8 +11642,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLive: 0
-  gameTime: 480
-  maxGameTime: 5
+  gameTime: 0
+  maxGameTime: 480
   playerId: 0
   health: 50
   maxHealth: 50
@@ -15021,7 +15021,7 @@ Transform:
   m_GameObject: {fileID: 870658761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1204880659}
@@ -15057,12 +15057,12 @@ MonoBehaviour:
   - mobs:
     - {fileID: 11400000, guid: 11694a99ed4110c46a210e2e9be3b7e5, type: 2}
     percentage: 00000000
-    spawnTime: 0.3
+    spawnTime: 0.5
   - mobs:
     - {fileID: 11400000, guid: 11694a99ed4110c46a210e2e9be3b7e5, type: 2}
     - {fileID: 11400000, guid: 03bc225838323e54d8cca56bdbeb7bf3, type: 2}
     percentage: 000000000000000001000000
-    spawnTime: 0.3
+    spawnTime: 0.5
   - mobs:
     - {fileID: 11400000, guid: 11694a99ed4110c46a210e2e9be3b7e5, type: 2}
     - {fileID: 11400000, guid: 03bc225838323e54d8cca56bdbeb7bf3, type: 2}
@@ -15074,29 +15074,29 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 03bc225838323e54d8cca56bdbeb7bf3, type: 2}
     - {fileID: 11400000, guid: b2e12b757e0e5e540bdb9e9834a78433, type: 2}
     percentage: 000000000000000001000000010000000100000002000000
-    spawnTime: 0.25
+    spawnTime: 0.4
   - mobs:
     - {fileID: 11400000, guid: 03bc225838323e54d8cca56bdbeb7bf3, type: 2}
     - {fileID: 11400000, guid: 5cbde870c1f4d1f41b1979ca12a02c3a, type: 2}
     percentage: 000000000100000001000000
-    spawnTime: 0.25
+    spawnTime: 0.3
   - mobs:
     - {fileID: 11400000, guid: 5cbde870c1f4d1f41b1979ca12a02c3a, type: 2}
     - {fileID: 11400000, guid: f410917a4ef613d469a9abdb9c457547, type: 2}
     percentage: 000000000000000001000000
-    spawnTime: 0.25
+    spawnTime: 0.3
   - mobs:
     - {fileID: 11400000, guid: 5cbde870c1f4d1f41b1979ca12a02c3a, type: 2}
     - {fileID: 11400000, guid: f410917a4ef613d469a9abdb9c457547, type: 2}
     - {fileID: 11400000, guid: 86a6c97c3c70dee4da56b5db02c3c0d3, type: 2}
     percentage: 000000000000000000000000000000000000000000000000010000000100000001000000010000000100000002000000
-    spawnTime: 0.25
+    spawnTime: 0.2
   - mobs:
     - {fileID: 11400000, guid: 5cbde870c1f4d1f41b1979ca12a02c3a, type: 2}
     - {fileID: 11400000, guid: f410917a4ef613d469a9abdb9c457547, type: 2}
     - {fileID: 11400000, guid: 30f0f35b633f4a34e980245172ed4898, type: 2}
     percentage: 0000000000000000010000000100000002000000
-    spawnTime: 0.2
+    spawnTime: 0.3
   - mobs:
     - {fileID: 11400000, guid: f410917a4ef613d469a9abdb9c457547, type: 2}
     - {fileID: 11400000, guid: da4bd47f53bbd5e47b3c36a5a4f33679, type: 2}
@@ -15111,19 +15111,19 @@ MonoBehaviour:
     - {fileID: 11400000, guid: da4bd47f53bbd5e47b3c36a5a4f33679, type: 2}
     - {fileID: 11400000, guid: 5ce06fef53b72a243ac2dcc4cca4aa88, type: 2}
     percentage: 0000000001000000
-    spawnTime: 0.15
+    spawnTime: 0.2
   - mobs:
     - {fileID: 11400000, guid: da4bd47f53bbd5e47b3c36a5a4f33679, type: 2}
     - {fileID: 11400000, guid: 5ce06fef53b72a243ac2dcc4cca4aa88, type: 2}
     - {fileID: 11400000, guid: 7ca53659c71747041bd937568875955f, type: 2}
     percentage: 000000000000000000000000000000000000000000000000000000000100000001000000010000000100000001000000010000000100000002000000
-    spawnTime: 0.15
+    spawnTime: 0.1
   - mobs:
     - {fileID: 11400000, guid: da4bd47f53bbd5e47b3c36a5a4f33679, type: 2}
     - {fileID: 11400000, guid: 5ce06fef53b72a243ac2dcc4cca4aa88, type: 2}
     - {fileID: 11400000, guid: 00e611cc1fe054b42b7778ddcbf888f4, type: 2}
     percentage: 0000000000000000010000000100000002000000
-    spawnTime: 0.1
+    spawnTime: 0.2
   - mobs:
     - {fileID: 11400000, guid: 5ce06fef53b72a243ac2dcc4cca4aa88, type: 2}
     - {fileID: 11400000, guid: 00e611cc1fe054b42b7778ddcbf888f4, type: 2}
@@ -28086,8 +28086,8 @@ Transform:
   m_GameObject: {fileID: 1779509351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 578419525}
   - {fileID: 202997976}

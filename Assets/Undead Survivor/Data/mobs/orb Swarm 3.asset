@@ -17,6 +17,6 @@ MonoBehaviour:
   spriteType: 3
   health: 12
   speed: 8
-  scale: 0.5
+  scale: 0.3
   mass: 100
   exp: 0.5

@@ -16,7 +16,7 @@ MonoBehaviour:
   color: {r: 1, g: 0.75849056, b: 0.75849056, a: 1}
   spriteType: 2
   health: 500
-  speed: 3
-  scale: 1.5
+  speed: 2
+  scale: 1
   mass: 500
   exp: 10
