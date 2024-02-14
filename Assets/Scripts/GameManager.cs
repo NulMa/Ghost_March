@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour{
     public LevelUp uiLevelUp;
     public Result uiResult;
     public RectTransform uiJoy;
+    public Vector3 joySize;
     public GameObject enemyCleaner;
 
     public Vector2 touchStartPos;
@@ -44,14 +45,25 @@ public class GameManager : MonoBehaviour{
 
     }
 
+    public void HpGen() {
+        health += 0.01f;
+    }
+
     public void LateUpdate() {
+        if(health > maxHealth) {
+            health = maxHealth;
+        }
+
+        HpGen();
+
+
 
         if(Input.touchCount > 0) {
             touch = Input.GetTouch(0);
             switch (touch.phase) {
                 case TouchPhase.Began:
                     uiJoy.SetAsFirstSibling();
-                    uiJoy.localScale = Vector3.one;
+                    uiJoy.localScale = joySize;
                     uiJoy.position = touch.position;
                     touchStartPos = touch.position;
                     break;
@@ -166,7 +178,7 @@ public class GameManager : MonoBehaviour{
     public void Resume() {
         isLive = true;
         Time.timeScale = 1;
-        uiJoy.localScale = Vector3.one;
+        uiJoy.localScale = joySize;
     }
 
     public void PauseStop() {
@@ -180,6 +192,6 @@ public class GameManager : MonoBehaviour{
     public void PauseResume() {
         isLive = true;
         Time.timeScale = 1;
-        uiJoy.localScale = Vector3.one;
+        uiJoy.localScale = joySize;
     }
 }
