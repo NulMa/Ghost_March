@@ -23,6 +23,7 @@ public class Souls : MonoBehaviour
     }
 
     private void FixedUpdate() {
+        range = GameManager.instance.SoulRange;
         if (!GameManager.instance.isLive)
             return;
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -21,10 +22,12 @@ public class GameManager : MonoBehaviour{
     public int playerId;
     public float health;
     public float maxHealth = 100;
+    public float RegPerSec;
     public int level;
     public int kill;
     public float exp;
     public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
+    public float SoulRange;
 
     [Header("# Game Object")]
     public PoolManager pool;
@@ -42,21 +45,21 @@ public class GameManager : MonoBehaviour{
     private void Awake() {
         instance = this;
         Application.targetFrameRate = 60;
+        StartCoroutine(RegHP());
 
     }
 
-    public void HpGen() {
-        health += 0.01f;
+    IEnumerator RegHP() {
+        while (true) {
+            yield return new WaitForSeconds(1f);
+            health = health + RegPerSec;
+        }
     }
 
     public void LateUpdate() {
         if(health > maxHealth) {
             health = maxHealth;
         }
-
-        HpGen();
-
-
 
         if(Input.touchCount > 0) {
             touch = Input.GetTouch(0);

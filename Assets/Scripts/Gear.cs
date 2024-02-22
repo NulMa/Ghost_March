@@ -25,11 +25,23 @@ public class Gear : MonoBehaviour{
     void ApplyGear() {
         switch (type) {
             case ItemData.ItemType.Glove:
+                Debug.Log("APPG");
                 RateUp();
                 break;
 
             case ItemData.ItemType.Shoe:
+                Debug.Log("APPG");
                 SpeedUp();
+                break;
+
+            case ItemData.ItemType.FoldingFan:
+                Debug.Log("APPG");
+                RangeUp();//range is soul absorb range
+                break;
+
+            case ItemData.ItemType.Rice:
+                Debug.Log("APPG");
+                RegUp();
                 break;
         }
     }
@@ -71,6 +83,16 @@ public class Gear : MonoBehaviour{
     void SpeedUp() {
         float speed = 1.5f * Character.Speed;
         GameManager.instance.player.speed = speed + speed * rate;
+    }
+
+    void RangeUp() {
+        Debug.Log("Range");
+        GameManager.instance.SoulRange = GameManager.instance.SoulRange + GameManager.instance.SoulRange * rate;
+    }
+
+    void RegUp() {
+        Debug.Log("Rate");
+        GameManager.instance.RegPerSec = rate;
     }
 }
 

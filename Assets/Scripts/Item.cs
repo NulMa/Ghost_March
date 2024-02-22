@@ -41,8 +41,14 @@ public class Item : MonoBehaviour{
 
             case ItemData.ItemType.Glove:
             case ItemData.ItemType.Shoe:
+            case ItemData.ItemType.FoldingFan:
                 textDesc.text = string.Format(data.itemDesc, data.damages[level] * 100);
                 break;
+
+            case ItemData.ItemType.Rice:
+                textDesc.text = string.Format(data.itemDesc, data.damages[level]);
+                break;
+
             default:
                 textDesc.text = string.Format(data.itemDesc);
                 break;
@@ -73,6 +79,8 @@ public class Item : MonoBehaviour{
 
             case ItemData.ItemType.Glove:
             case ItemData.ItemType.Shoe:
+            case ItemData.ItemType.FoldingFan:
+            case ItemData.ItemType.Rice:
                 if (level == 0) {
                     GameObject newGear = new GameObject();
                     gear = newGear.AddComponent<Gear>();
