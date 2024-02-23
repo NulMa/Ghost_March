@@ -41,7 +41,7 @@ public class Item : MonoBehaviour{
 
             case ItemData.ItemType.Glove:
             case ItemData.ItemType.Shoe:
-            case ItemData.ItemType.FoldingFan:
+            case ItemData.ItemType.Fluorite:
                 textDesc.text = string.Format(data.itemDesc, data.damages[level] * 100);
                 break;
 
@@ -79,7 +79,7 @@ public class Item : MonoBehaviour{
 
             case ItemData.ItemType.Glove:
             case ItemData.ItemType.Shoe:
-            case ItemData.ItemType.FoldingFan:
+            case ItemData.ItemType.Fluorite:
             case ItemData.ItemType.Rice:
                 if (level == 0) {
                     GameObject newGear = new GameObject();

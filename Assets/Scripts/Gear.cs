@@ -34,7 +34,7 @@ public class Gear : MonoBehaviour{
                 SpeedUp();
                 break;
 
-            case ItemData.ItemType.FoldingFan:
+            case ItemData.ItemType.Fluorite:
                 Debug.Log("APPG");
                 RangeUp();//range is soul absorb range
                 break;
