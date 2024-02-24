@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using static Cinemachine.DocumentationSortingAttribute;
 
 public class HUD : MonoBehaviour{
-    public enum InfoType { Exp, Level, Kill, Time, Health }
+    public enum InfoType { Exp, Level, Kill, Time, Health,SpecialMove }
     public InfoType type;
 
     Text myText;
@@ -28,6 +28,12 @@ public class HUD : MonoBehaviour{
                 float curHealth= GameManager.instance.health ;
                 float maxHealth = GameManager.instance.maxHealth;
                 mySlider.value = curHealth / maxHealth;
+                break;
+
+            case InfoType.SpecialMove:
+                float curSpecial = GameManager.instance.SpecialGauge;
+                float maxSpecial = GameManager.instance.MaxSpecialGauge;
+                mySlider.value = 1 - curSpecial / maxSpecial;
                 break;
 
             case InfoType.Kill:

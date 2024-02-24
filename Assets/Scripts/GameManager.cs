@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour{
     public float exp;
     public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
     public float SoulRange;
+    public float MaxSpecialGauge;
+    public float SpecialGauge;
 
     [Header("# Game Object")]
     public PoolManager pool;
@@ -37,16 +39,41 @@ public class GameManager : MonoBehaviour{
     public RectTransform uiJoy;
     public Vector3 joySize;
     public GameObject enemyCleaner;
+    public GameObject SpecialMove;  
 
     public Vector2 touchStartPos;
     public Vector2 touchEndPos;
     public Vector2 touchDirection;
+    public float Rad;
 
     private void Awake() {
         instance = this;
         Application.targetFrameRate = 60;
         StartCoroutine(RegHP());
 
+    }
+
+
+    private void FixedUpdate() {
+        Rad = MathF.Atan2(touchDirection.y, touchDirection.x) * Mathf.Rad2Deg;
+
+        switch (Rad) {
+            case float rad when (rad >= 80 && rad <= 100):
+                Debug.Log("Up");
+                break;
+
+            case float rad when (rad >= -10 && rad <= 10 && rad != 0):
+                Debug.Log("Right");
+                break;
+
+            case float rad when (rad >= -100 && rad <= -80):
+                Debug.Log("Down");
+                break;
+
+            case float rad when (rad >= 170 || rad <= -170):
+                Debug.Log("Left");
+                break;
+        }
     }
 
     IEnumerator RegHP() {
