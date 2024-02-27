@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using static Cinemachine.DocumentationSortingAttribute;
 
 public class HUD : MonoBehaviour{
-    public enum InfoType { Exp, Level, Kill, Time, Health,SpecialMove }
+    public enum InfoType { Exp, Level, Kill, Time, Health, SpecialMove, CommandTime }
     public InfoType type;
 
     Text myText;
@@ -49,6 +49,10 @@ public class HUD : MonoBehaviour{
                 int min = Mathf.FloorToInt(remainTime / 60);
                 int sec = Mathf.FloorToInt(remainTime % 60);
                 myText.text = string.Format("{0:D2}:{1:D2}", min, sec);
+                break;
+
+            case InfoType.CommandTime:
+                mySlider.value = GetComponentInParent<Specialz>().Timer / 5;
                 break;
         }
     }

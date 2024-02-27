@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour{
     public float SoulRange;
     public float MaxSpecialGauge;
     public float SpecialGauge;
+    public float myDir;
 
     [Header("# Game Object")]
     public PoolManager pool;
@@ -38,8 +39,9 @@ public class GameManager : MonoBehaviour{
     public Result uiResult;
     public RectTransform uiJoy;
     public Vector3 joySize;
+    public GameObject SpMoveButton;
     public GameObject enemyCleaner;
-    public GameObject SpecialMove;  
+    public GameObject SpecialMove;
 
     public Vector2 touchStartPos;
     public Vector2 touchEndPos;
@@ -57,21 +59,24 @@ public class GameManager : MonoBehaviour{
     private void FixedUpdate() {
         Rad = MathF.Atan2(touchDirection.y, touchDirection.x) * Mathf.Rad2Deg;
 
+        if (touchDirection == Vector2.zero)
+            myDir = 1;
+
         switch (Rad) {
             case float rad when (rad >= 80 && rad <= 100):
-                Debug.Log("Up");
+                myDir = 0;
                 break;
 
             case float rad when (rad >= -10 && rad <= 10 && rad != 0):
-                Debug.Log("Right");
+                myDir = 270;
                 break;
 
             case float rad when (rad >= -100 && rad <= -80):
-                Debug.Log("Down");
+                myDir = 180;
                 break;
 
             case float rad when (rad >= 170 || rad <= -170):
-                Debug.Log("Left");
+                myDir = 90;
                 break;
         }
     }
@@ -87,8 +92,18 @@ public class GameManager : MonoBehaviour{
         if(health > maxHealth) {
             health = maxHealth;
         }
+        if (SpecialGauge > MaxSpecialGauge) {
+            SpecialGauge = MaxSpecialGauge;
+        }
 
-        if(Input.touchCount > 0) {
+        if(SpecialGauge == MaxSpecialGauge) {
+            SpMoveButton.SetActive(true);
+        }
+        else {
+            SpMoveButton.SetActive(false);
+        }
+
+        if (Input.touchCount > 0) {
             touch = Input.GetTouch(0);
             switch (touch.phase) {
                 case TouchPhase.Began:
@@ -148,6 +163,17 @@ public class GameManager : MonoBehaviour{
     public void GameVictory() {
         StartCoroutine(GameVictoryRoutine());
 
+    }
+
+    public void SepcialMove() {
+        StartCoroutine(ActiveSpecialMove());
+    }
+
+    IEnumerator ActiveSpecialMove() {
+        SpecialMove.SetActive(true);
+        SpecialGauge = 0;
+        yield return new WaitForSeconds(0.5f);
+        SpecialMove.SetActive(false);
     }
 
     IEnumerator GameVictoryRoutine() {
