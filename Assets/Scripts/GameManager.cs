@@ -167,6 +167,7 @@ public class GameManager : MonoBehaviour{
 
     public void SepcialMove() {
         StartCoroutine(ActiveSpecialMove());
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 0);
     }
 
     IEnumerator ActiveSpecialMove() {

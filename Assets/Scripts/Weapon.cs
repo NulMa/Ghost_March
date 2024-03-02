@@ -152,6 +152,7 @@ public class Weapon : MonoBehaviour{
             
             if(index < transform.childCount) {
                 bullet = transform.GetChild(index);
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.newWeap, 1);
             }
             else {
                 bullet = GameManager.instance.pool.Get(prefabId).transform;
@@ -199,7 +200,7 @@ public class Weapon : MonoBehaviour{
 
 
         bullet.eulerAngles = new Vector3(0, 0, RotAng - 90);
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Melee, 0);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.newWeap, 2);
     }
 
 
@@ -222,14 +223,12 @@ public class Weapon : MonoBehaviour{
 
 
         // arrow multply
-             if (id == 6) {
+        if (id == 6) {
             for(int i=0; i < count/2; i++) {
-                
                 Transform bulletRight = GameManager.instance.pool.Get(prefabId).transform;
                 Transform bulletLeft = GameManager.instance.pool.Get(prefabId).transform;
                 bulletRight.transform.parent = bullet;
                 bulletLeft.transform.parent = bullet;
-
 
                 bulletRight.localPosition = new Vector3(0.5f * (i + 1), 0, 0);
                 bulletLeft.localPosition = new Vector3(-0.5f * (i + 1), 0, 0);
@@ -246,8 +245,12 @@ public class Weapon : MonoBehaviour{
                 bulletRight.GetComponent<Bullet>().Init(damage, count, dir + rotVecRight);
                 bulletLeft.GetComponent<Bullet>().Init(damage, count, dir + rotVecLeft);
             }
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.newWeap, 3);
         }
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Range, 0);
+        else {
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.newWeap, 0);
+        }
+        
     }
 
     void Splash() {

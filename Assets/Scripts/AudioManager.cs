@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour{
     AudioSource[] sfxPlayers;
     int channelIndex;
 
-    public enum Sfx { Dead, Hit, LevelUp=4, Lose, Melee, Range=8, Select, Win, Lightning }
+    public enum Sfx { Dead, Hit, LevelUp=4, Lose, Melee, Range=8, Select, Win, Lightning, newMobDead, newWeap = 16, etc = 20, specialz }
 
     private void Awake() {
         instance = this;

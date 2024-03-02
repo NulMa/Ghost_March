@@ -167,7 +167,7 @@ public class Enemy : MonoBehaviour{
 
             //GameManager.instance.GetExp();
             if(GameManager.instance.isLive)
-                AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead, 0);
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.newMobDead, spriteType);
         }
 
         IEnumerator knockBack() {
