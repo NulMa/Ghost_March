@@ -24,6 +24,7 @@ public class Specialz : MonoBehaviour{
 
         if (CommNum < CommDir.Length &&CommDir[CommNum].eulerAngles.z == GameManager.instance.myDir) {
             CommDir[CommNum].gameObject.SetActive(false);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.ui, 1);
             CommNum++;
 
         }
@@ -31,6 +32,7 @@ public class Specialz : MonoBehaviour{
         if(CommNum == 4 && isGetSP == false) {
             isGetSP = true;
             GameManager.instance.SpecialGauge += 12f;
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.ui, 0);
         }
 
     }
@@ -55,6 +57,7 @@ public class Specialz : MonoBehaviour{
     IEnumerator GenDir() { //generate command Directions
         while (true) {
             yield return new WaitForSeconds(5f);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.ui, 2);
             Timer = 0;
 
             CommNum = 0;

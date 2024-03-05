@@ -6195,7 +6195,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "1\uBC88 \uC774\uC0C1 \uC0DD\uC874\uC2DC \uB4F1\uC7A5"
+  m_Text: "1\uBC88 \uC0DD\uC874\uC2DC \uB4F1\uC7A5"
 --- !u!222 &196839923
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13891,7 +13891,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Game Start
 --- !u!222 &643747829
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21923,7 +21923,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "3,000 (KR Won) / \uBBF8\uAD6C\uD604\n1\uBC88 \uC0AC\uB9DD\uC2DC \uB4F1\uC7A5"
+  m_Text: "1\uBC88 \uC0AC\uB9DD\uC2DC \uB4F1\uC7A5"
 --- !u!222 &1127488047
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22526,7 +22526,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Game Start
 --- !u!222 &1176869671
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22790,7 +22790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1212591821
 Transform:
   m_ObjectHideFlags: 0
@@ -22835,17 +22835,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1212591825}
-    m_ColliderPaths:
-    - - X: 100000000
-        Y: 100000000
-      - X: -100000000
-        Y: 100000000
-      - X: -100000000
-        Y: -100000000
-      - X: 100000000
-        Y: -100000000
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 9.99997, y: -10}
@@ -27811,11 +27801,11 @@ RectTransform:
   m_Father: {fileID: 1392509093}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -10, y: 50}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: 20, y: 20}
-  m_Pivot: {x: 1, y: 0}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1313976617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29570,6 +29560,46 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1535138171}
     m_ColliderPaths:
+    - - X: -170000000
+        Y: 360000000
+      - X: -140000000
+        Y: 360000000
+      - X: -140000000
+        Y: 370000000
+      - X: -180000000
+        Y: 370000000
+      - X: -180000000
+        Y: 350000000
+      - X: -170000000
+        Y: 350000000
+    - - X: -120000000
+        Y: 360000000
+      - X: -140000000
+        Y: 360000000
+      - X: -140000000
+        Y: 350000000
+      - X: -120000000
+        Y: 350000000
+    - - X: -110000000
+        Y: 320000000
+      - X: -100000000
+        Y: 320000000
+      - X: -100000000
+        Y: 340000000
+      - X: -110000000
+        Y: 340000000
+      - X: -110000000
+        Y: 350000000
+      - X: -120000000
+        Y: 350000000
+      - X: -120000000
+        Y: 320000000
+      - X: -180000000
+        Y: 320000000
+      - X: -180000000
+        Y: 310000000
+      - X: -110000000
+        Y: 310000000
     - - X: 100000000
         Y: 100000000
       - X: -100000000
@@ -29580,6 +29610,26 @@ CompositeCollider2D:
         Y: -100000000
   m_CompositePaths:
     m_Paths:
+    - - {x: -17.000029, y: 35}
+      - {x: -16.999971, y: 36}
+      - {x: -14, y: 36.00003}
+      - {x: -14.000029, y: 37}
+      - {x: -18, y: 36.999973}
+      - {x: -17.999971, y: 35}
+    - - {x: -12.00003, y: 35}
+      - {x: -12.00003, y: 36}
+      - {x: -14, y: 35.999973}
+      - {x: -13.999971, y: 35}
+    - - {x: -11.00003, y: 31}
+      - {x: -10.99997, y: 32}
+      - {x: -10, y: 32.00003}
+      - {x: -10.00003, y: 34}
+      - {x: -11, y: 34.00003}
+      - {x: -11.00003, y: 35}
+      - {x: -12, y: 34.999973}
+      - {x: -12.00003, y: 32}
+      - {x: -18, y: 31.999971}
+      - {x: -17.999971, y: 31}
     - - {x: 9.99997, y: -10}
       - {x: 9.99997, y: 10}
       - {x: -10, y: 9.99997}
@@ -35781,7 +35831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1908300162
 Transform:
   m_ObjectHideFlags: 0
@@ -35826,17 +35876,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1908300166}
-    m_ColliderPaths:
-    - - X: 100000000
-        Y: 100000000
-      - X: -100000000
-        Y: 100000000
-      - X: -100000000
-        Y: -100000000
-      - X: 100000000
-        Y: -100000000
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 9.99997, y: -10}
@@ -40852,6 +40892,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a8cffafeab9214a41898016d0fd81c33, type: 3}
   - {fileID: 8300000, guid: a8cffafeab9214a41898016d0fd81c33, type: 3}
   - {fileID: 8300000, guid: a8cffafeab9214a41898016d0fd81c33, type: 3}
+  - {fileID: 8300000, guid: a8cffafeab9214a41898016d0fd81c33, type: 3}
+  - {fileID: 8300000, guid: 5f7fd0d9c764bdd4b965d0389bc16b92, type: 3}
+  - {fileID: 8300000, guid: 14f24de2a9a70154e96297de25e2184c, type: 3}
+  - {fileID: 8300000, guid: 291608b8d286e2a4580ff36324455ce2, type: 3}
   - {fileID: 8300000, guid: a8cffafeab9214a41898016d0fd81c33, type: 3}
   sfxVolume: 0.25
   channels: 16
