@@ -14137,7 +14137,7 @@ RectTransform:
   m_GameObject: {fileID: 672067732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 111}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1444068346}
@@ -14158,7 +14158,7 @@ Animator:
   m_GameObject: {fileID: 672067732}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1d24d7bb924a0e449bf6f97446ef2dc8, type: 2}
+  m_Controller: {fileID: 22100000, guid: fedabbc70fa88174eb7d2d49a2ba0968, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -17048,7 +17048,7 @@ RectTransform:
   m_GameObject: {fileID: 935227438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 111}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1444068346}
@@ -29704,7 +29704,7 @@ RectTransform:
   m_GameObject: {fileID: 1497868939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 111}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1444068346}
@@ -29725,7 +29725,7 @@ Animator:
   m_GameObject: {fileID: 1497868939}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1d24d7bb924a0e449bf6f97446ef2dc8, type: 2}
+  m_Controller: {fileID: 22100000, guid: 24eb2b24ded817044a48f63bded79870, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -40713,7 +40713,7 @@ RectTransform:
   m_GameObject: {fileID: 1914886543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 111}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1444068346}
@@ -41598,7 +41598,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2b1dca499cd3b7543afe37debb1d15ff, type: 3}
   - {fileID: 8300000, guid: be26030099234c64fa0879aa6b70d07f, type: 3}
   - {fileID: 8300000, guid: a8cffafeab9214a41898016d0fd81c33, type: 3}
-  - {fileID: 8300000, guid: a8cffafeab9214a41898016d0fd81c33, type: 3}
+  - {fileID: 8300000, guid: ee60e9555701b9e4599e64a902a84e05, type: 3}
   - {fileID: 8300000, guid: a8cffafeab9214a41898016d0fd81c33, type: 3}
   - {fileID: 8300000, guid: a8cffafeab9214a41898016d0fd81c33, type: 3}
   - {fileID: 8300000, guid: 5f7fd0d9c764bdd4b965d0389bc16b92, type: 3}

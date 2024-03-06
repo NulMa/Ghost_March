@@ -178,15 +178,12 @@ public class GameManager : MonoBehaviour{
 
     IEnumerator ActiveSpecialMove() {
         SpcMoveCutScene[playerId].SetActive(true);
-
-
-
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 0);
         SpecialGauge = 0;
 
         switch (playerId) {
             case 0:
-                SpecialMove.GetComponent<Bullet>().damage = 125;
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 0);
+                SpecialMove.GetComponent<Bullet>().damage = 80;
                 for (int i = 0; i < 10; i++) {
                     SpecialMove.SetActive(true);
                     yield return new WaitForSeconds(0.2f);
@@ -195,16 +192,34 @@ public class GameManager : MonoBehaviour{
                 break;
 
             case 1:
-                SpecialMove.GetComponent<Bullet>().damage = 80;
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 1);
+                SpecialMove.GetComponent<Bullet>().damage = 20;
                 for (int i = 0; i < 15; i++) {
                     SpecialMove.SetActive(true);
+                    AudioManager.instance.PlaySfx(AudioManager.Sfx.newWeap, 2);
                     yield return new WaitForSeconds(0.1f);
                     SpecialMove.SetActive(false);
                 }
+
+                yield return new WaitForSeconds(0.5f);
+                SpecialMove.SetActive(true);
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.newWeap, 2);
+                SpecialMove.GetComponent<Bullet>().damage = 200;
+                yield return new WaitForSeconds(0.1f);
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.newWeap, 2);
+                SpecialMove.SetActive(false);
+
+                yield return new WaitForSeconds(0.7f);
+                SpecialMove.GetComponent<Bullet>().damage = 300;
+                SpecialMove.SetActive(true);
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.specialz, 1);
+                yield return new WaitForSeconds(0.1f);
+                SpecialMove.SetActive(false);
                 break;
 
             case 2:
-                SpecialMove.GetComponent<Bullet>().damage = 500;
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 2);
+                SpecialMove.GetComponent<Bullet>().damage = 300;
                 for (int i = 0; i < 3; i++) {
                     SpecialMove.SetActive(true);
                     yield return new WaitForSeconds(1f);
