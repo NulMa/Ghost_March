@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour{
     public GameObject enemyCleaner;
     public GameObject SpecialMove;
 
+    public GameObject[] SpcMoveCutScene;
+
     public Vector2 touchStartPos;
     public Vector2 touchEndPos;
     public Vector2 touchDirection;
@@ -167,14 +169,51 @@ public class GameManager : MonoBehaviour{
 
     public void SepcialMove() {
         StartCoroutine(ActiveSpecialMove());
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 0);
+        
+    }
+
+    public void EndSpclMv() {
+        SpcMoveCutScene[playerId].SetActive(false);
     }
 
     IEnumerator ActiveSpecialMove() {
-        SpecialMove.SetActive(true);
+        SpcMoveCutScene[playerId].SetActive(true);
+
+
+
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 0);
         SpecialGauge = 0;
-        yield return new WaitForSeconds(0.5f);
-        SpecialMove.SetActive(false);
+
+        switch (playerId) {
+            case 0:
+                SpecialMove.GetComponent<Bullet>().damage = 125;
+                for (int i = 0; i < 10; i++) {
+                    SpecialMove.SetActive(true);
+                    yield return new WaitForSeconds(0.2f);
+                    SpecialMove.SetActive(false);
+                }
+                break;
+
+            case 1:
+                SpecialMove.GetComponent<Bullet>().damage = 80;
+                for (int i = 0; i < 15; i++) {
+                    SpecialMove.SetActive(true);
+                    yield return new WaitForSeconds(0.1f);
+                    SpecialMove.SetActive(false);
+                }
+                break;
+
+            case 2:
+                SpecialMove.GetComponent<Bullet>().damage = 500;
+                for (int i = 0; i < 3; i++) {
+                    SpecialMove.SetActive(true);
+                    yield return new WaitForSeconds(1f);
+                    SpecialMove.SetActive(false);
+                }
+                break;
+        }
+
+
     }
 
     IEnumerator GameVictoryRoutine() {
