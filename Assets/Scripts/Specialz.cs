@@ -31,7 +31,7 @@ public class Specialz : MonoBehaviour{
 
         if(CommNum == 4 && isGetSP == false) {
             isGetSP = true;
-            GameManager.instance.SpecialGauge += 12f;
+            GameManager.instance.SpecialGauge += 15f;
             AudioManager.instance.PlaySfx(AudioManager.Sfx.ui, 0);
         }
 

@@ -25,22 +25,18 @@ public class Gear : MonoBehaviour{
     void ApplyGear() {
         switch (type) {
             case ItemData.ItemType.Glove:
-                Debug.Log("APPG");
                 RateUp();
                 break;
 
             case ItemData.ItemType.Shoe:
-                Debug.Log("APPG");
                 SpeedUp();
                 break;
 
             case ItemData.ItemType.Fluorite:
-                Debug.Log("APPG");
                 RangeUp();//range is soul absorb range
                 break;
 
             case ItemData.ItemType.Rice:
-                Debug.Log("APPG");
                 RegUp();
                 break;
         }

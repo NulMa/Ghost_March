@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Threading;
 using Unity.VisualScripting;
+//using UnityEditor.Callbacks;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour{
@@ -44,6 +47,7 @@ public class GameManager : MonoBehaviour{
     public GameObject SpecialMove;
 
     public GameObject[] SpcMoveCutScene;
+    public GameObject gv;
 
     public Vector2 touchStartPos;
     public Vector2 touchEndPos;
@@ -179,11 +183,12 @@ public class GameManager : MonoBehaviour{
     IEnumerator ActiveSpecialMove() {
         SpcMoveCutScene[playerId].SetActive(true);
         SpecialGauge = 0;
+        gv.GetComponent<GV>().StartCoroutine("CaOn");
 
         switch (playerId) {
             case 0:
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 0);
-                SpecialMove.GetComponent<Bullet>().damage = 80;
+                SpecialMove.GetComponent<Bullet>().damage = 50;
                 for (int i = 0; i < 10; i++) {
                     SpecialMove.SetActive(true);
                     yield return new WaitForSeconds(0.2f);
@@ -193,7 +198,7 @@ public class GameManager : MonoBehaviour{
 
             case 1:
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 1);
-                SpecialMove.GetComponent<Bullet>().damage = 20;
+                SpecialMove.GetComponent<Bullet>().damage = 10;
                 for (int i = 0; i < 15; i++) {
                     SpecialMove.SetActive(true);
                     AudioManager.instance.PlaySfx(AudioManager.Sfx.newWeap, 2);
@@ -204,13 +209,13 @@ public class GameManager : MonoBehaviour{
                 yield return new WaitForSeconds(0.5f);
                 SpecialMove.SetActive(true);
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.newWeap, 2);
-                SpecialMove.GetComponent<Bullet>().damage = 200;
+                SpecialMove.GetComponent<Bullet>().damage = 100;
                 yield return new WaitForSeconds(0.1f);
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.newWeap, 2);
                 SpecialMove.SetActive(false);
 
                 yield return new WaitForSeconds(0.7f);
-                SpecialMove.GetComponent<Bullet>().damage = 300;
+                SpecialMove.GetComponent<Bullet>().damage = 200;
                 SpecialMove.SetActive(true);
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.specialz, 1);
                 yield return new WaitForSeconds(0.1f);
@@ -219,7 +224,7 @@ public class GameManager : MonoBehaviour{
 
             case 2:
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 2);
-                SpecialMove.GetComponent<Bullet>().damage = 300;
+                SpecialMove.GetComponent<Bullet>().damage = 200;
                 for (int i = 0; i < 3; i++) {
                     SpecialMove.SetActive(true);
                     yield return new WaitForSeconds(1f);
@@ -227,8 +232,7 @@ public class GameManager : MonoBehaviour{
                 }
                 break;
         }
-
-
+        
     }
 
     IEnumerator GameVictoryRoutine() {

@@ -25,6 +25,22 @@ MonoBehaviour:
   texture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
+--- !u!114 &-5267318393266468994
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &-4264054818074944360
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -46,10 +62,10 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.448
+    m_Value: 0.485
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.847
+    m_Value: 0.972
   rounded:
     m_OverrideState: 1
     m_Value: 1
@@ -69,6 +85,7 @@ MonoBehaviour:
   - {fileID: 3510460328209441576}
   - {fileID: -6721872194894848785}
   - {fileID: -4264054818074944360}
+  - {fileID: -5267318393266468994}
 --- !u!114 &3510460328209441576
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -96,7 +113,7 @@ MonoBehaviour:
     m_Value: 65472
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0.46287465, g: 0.37169808, b: 1, a: 1}
+    m_Value: {r: 0.6449621, g: 0.5226415, b: 1, a: 1}
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 0
