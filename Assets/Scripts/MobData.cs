@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Mob", menuName = "Scriptble OBject/MobData")]
 
 public class MobData : ScriptableObject {
-    public enum MobType { normal, swarm, boss }
+    public enum MobType { normal, swarm, boss, bigBoss }
 
     [Header("# Main Info")]
     public MobType mobType;

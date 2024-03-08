@@ -68,6 +68,10 @@ public class Player : MonoBehaviour{
             return;
 
         GameManager.instance.health -= Time.deltaTime * 10f;
+        collision.gameObject.GetComponent<Enemy>().health -= Time.deltaTime * 30f;
+        if (collision.gameObject.GetComponent<Enemy>().health < 0)
+            collision.gameObject.GetComponent<Enemy>().mobDead();
+
         if (isHit == false) {
             StartCoroutine(PlayerDamaged());
         }

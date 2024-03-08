@@ -9,6 +9,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour{
     //정적 변수 선언 = 즉시 클래스에서 호출 가능
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour{
     public GameObject SpMoveButton;
     public GameObject enemyCleaner;
     public GameObject SpecialMove;
+    public Text versionInfo;
 
     public GameObject[] SpcMoveCutScene;
     public GameObject gv;
@@ -58,7 +60,7 @@ public class GameManager : MonoBehaviour{
         instance = this;
         Application.targetFrameRate = 60;
         StartCoroutine(RegHP());
-
+        versionInfo.text = string.Format("v.{0}", Application.version);
     }
 
 

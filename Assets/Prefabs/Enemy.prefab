@@ -100,7 +100,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804787520273738623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: -2}
+  m_LocalPosition: {x: 0, y: 0.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -132,7 +132,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4670541055275127327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.2, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -341,8 +341,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2}
-  m_Size: {x: 0.7, y: 1.3}
+  m_Offset: {x: 0, y: -0.4}
+  m_Size: {x: 0.7, y: 1}
   m_Direction: 0
 --- !u!114 &4670541056870011759
 MonoBehaviour:
@@ -370,6 +370,7 @@ MonoBehaviour:
   soul: {fileID: 3958643577827335626, guid: 6eab1a6dd2019404b842356fa7b40e15, type: 3}
   smallHeal: {fileID: 3958643577827335626, guid: fa4491d9baeb8234cb0ccda35719680f, type: 3}
   hudDamageText: {fileID: 4996823814613480016, guid: 626bacaed10e25d4eb460dbb0bba12e4, type: 3}
+  BossHud: {fileID: 8249725549203635316}
   hudPos: {fileID: 8379030721774092455}
   spriteType: 0
   tempDir: {x: 0, y: 0}
@@ -729,7 +730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &946189395115006833

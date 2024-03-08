@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour{
     public GameObject soul;
     public GameObject smallHeal;
     public GameObject hudDamageText;
+    public GameObject BossHud;
+
     public Transform hudPos;
 
     public int spriteType;
@@ -115,11 +117,46 @@ public class Enemy : MonoBehaviour{
         rigid.mass = data.mass;
         exp = data.exp;
 
+        if(data.mobType == MobData.MobType.bigBoss) {
+            BossHud.gameObject.SetActive(true);
+        }
+        else {
+            BossHud.gameObject.SetActive(false);
+        }
+
+
         if (spriteType == 3) {
             this.gameObject.layer = 7;
             spriter.sortingOrder = 3;
         }
 
+    }
+
+    public void mobDead() {
+        isLive = false;
+        coll.enabled = false;
+        rigid.simulated = false;
+        spriter.sortingOrder = 1;
+        anim.SetBool("Dead", true);
+        GameManager.instance.kill++;
+        int spawnHeal = Random.Range(0, 100);
+
+        if (spawnHeal <= 97) {
+            GameObject souls = Instantiate(soul);
+
+            souls.GetComponent<Souls>().exp = exp;
+
+            souls.transform.position = this.transform.position;
+        }
+        else {
+            GameObject sHeal = Instantiate(smallHeal);
+
+            sHeal.transform.position = this.transform.position;
+        }
+
+        //GameManager.instance.GetExp();
+        if (GameManager.instance.isLive)
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.newMobDead, spriteType);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -140,34 +177,7 @@ public class Enemy : MonoBehaviour{
             AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit, spriteType);
         }
         else {
-            isLive = false;
-            coll.enabled = false;
-            rigid.simulated = false;
-            spriter.sortingOrder = 1;
-            anim.SetBool("Dead", true);
-            GameManager.instance.kill++;
-
-            int spawnHeal = Random.Range(0, 100);
-
-            
-
-            if(spawnHeal <= 97) {
-                GameObject souls = Instantiate(soul);
-
-                souls.GetComponent<Souls>().exp = exp;
-
-                souls.transform.position = this.transform.position;
-            }
-            else {
-                GameObject sHeal = Instantiate(smallHeal);
-
-                sHeal.transform.position = this.transform.position;
-            }
-
-
-            //GameManager.instance.GetExp();
-            if(GameManager.instance.isLive)
-                AudioManager.instance.PlaySfx(AudioManager.Sfx.newMobDead, spriteType);
+           mobDead();
         }
 
         IEnumerator knockBack() {
