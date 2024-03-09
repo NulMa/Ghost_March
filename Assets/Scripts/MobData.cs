@@ -19,5 +19,8 @@ public class MobData : ScriptableObject {
     public float scale;
     public float mass;
     public float exp;
+    public Vector2 shadowPos;
+    public Vector2 collOffset;
+    public Vector2 collSize;
 
 }

@@ -15,8 +15,11 @@ MonoBehaviour:
   mobType: 0
   color: {r: 0.82883906, g: 0.44716978, b: 1, a: 1}
   spriteType: 0
-  health: 20
+  health: 25
   speed: 0.5
   scale: 0.25
   mass: 3
   exp: 1
+  shadowPos: {x: 0, y: -1.1}
+  collOffset: {x: 0, y: -0.5}
+  collSize: {x: 1, y: 1}

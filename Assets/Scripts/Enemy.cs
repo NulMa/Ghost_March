@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour{
     public GameObject smallHeal;
     public GameObject hudDamageText;
     public GameObject BossHud;
+    public GameObject shadow;
 
     public Transform hudPos;
 
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour{
 
     Rigidbody2D rigid;
     Collider2D coll;
+    CapsuleCollider2D cColl;
     Animator anim;
     SpriteRenderer spriter;
     WaitForFixedUpdate wait;
@@ -34,6 +36,7 @@ public class Enemy : MonoBehaviour{
     private void Awake() {
         rigid = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
+        cColl = GetComponent<CapsuleCollider2D>();
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         wait = new WaitForFixedUpdate();
@@ -117,7 +120,19 @@ public class Enemy : MonoBehaviour{
         rigid.mass = data.mass;
         exp = data.exp;
 
-        if(data.mobType == MobData.MobType.bigBoss) {
+        shadow.transform.localPosition = data.shadowPos;
+        coll.offset = data.collOffset;
+        cColl.size = data.collSize;
+
+
+        /*
+    public Vector2 shadowPos;
+    public Vector2 collOffset;
+    public Vector2 collSize;
+        */
+
+
+        if (data.mobType == MobData.MobType.bigBoss) {
             BossHud.gameObject.SetActive(true);
         }
         else {

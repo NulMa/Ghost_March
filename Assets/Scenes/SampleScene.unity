@@ -12525,7 +12525,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8.111111
+  orthographic size: 8.444445
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -16476,7 +16476,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 03bc225838323e54d8cca56bdbeb7bf3, type: 2}
     percentage: 00000000
     spawnDuration: 5
-    spawnTime: 0.01
+    spawnTime: 0.2
   - mobs:
     - {fileID: 11400000, guid: 11694a99ed4110c46a210e2e9be3b7e5, type: 2}
     - {fileID: 11400000, guid: 03bc225838323e54d8cca56bdbeb7bf3, type: 2}
@@ -16497,6 +16497,11 @@ MonoBehaviour:
     percentage: 00000000010000000100000002000000
     spawnDuration: 40
     spawnTime: 0.25
+  - mobs:
+    - {fileID: 11400000, guid: cecd9e26cfb8d8040af8860d8cf18325, type: 2}
+    percentage: 00000000
+    spawnDuration: 5
+    spawnTime: 0.02
   - mobs:
     - {fileID: 11400000, guid: 03bc225838323e54d8cca56bdbeb7bf3, type: 2}
     - {fileID: 11400000, guid: 5cbde870c1f4d1f41b1979ca12a02c3a, type: 2}

@@ -20,3 +20,6 @@ MonoBehaviour:
   scale: 0.25
   mass: 3
   exp: 1
+  shadowPos: {x: 0, y: -1.1}
+  collOffset: {x: 0, y: -0.5}
+  collSize: {x: 1, y: 1}
