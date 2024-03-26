@@ -1,5 +1,6 @@
     using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using static Cinemachine.DocumentationSortingAttribute;
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour{
     public GameObject BossHud;
     public GameObject shadow;
 
+
     public Transform hudPos;
 
     public int spriteType;
@@ -32,6 +34,8 @@ public class Enemy : MonoBehaviour{
     Animator anim;
     SpriteRenderer spriter;
     WaitForFixedUpdate wait;
+    AchiveManager achive;
+
 
     private void Awake() {
         rigid = GetComponent<Rigidbody2D>();
@@ -154,6 +158,8 @@ public class Enemy : MonoBehaviour{
         spriter.sortingOrder = 1;
         anim.SetBool("Dead", true);
         GameManager.instance.kill++;
+        GameManager.instance.enemyKills[spriteType]++;
+
         int spawnHeal = Random.Range(0, 100);
 
         if (spawnHeal <= 97) {

@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour{
     public float MaxSpecialGauge;
     public float SpecialGauge;
     public float myDir;
+    public int[] enemyKills;
 
     [Header("# Game Object")]
     public PoolManager pool;
@@ -61,10 +62,18 @@ public class GameManager : MonoBehaviour{
         Application.targetFrameRate = 60;
         StartCoroutine(RegHP());
         versionInfo.text = string.Format("v.{0}", Application.version);
+        saveKillCount();
+
+        for (int i = 0; i < enemyKills.Length; i++) {
+            Debug.Log(PlayerPrefs.GetInt("EnemyCounts(" + i + ")"));
+        }
     }
 
 
+
+
     private void FixedUpdate() {
+
         Rad = MathF.Atan2(touchDirection.y, touchDirection.x) * Mathf.Rad2Deg;
 
         if (touchDirection == Vector2.zero)
@@ -155,17 +164,41 @@ public class GameManager : MonoBehaviour{
 
     public void GameOver() {
         StartCoroutine(GameOverRoutine());
+        
+    }
 
+    public void saveKillCount() {
+        for (int i = 0; i < enemyKills.Length; i++) {
+            PlayerPrefs.SetInt("EnemyCounts(" + i + ")", PlayerPrefs.GetInt("EnemyCounts(" + i + ")")+ enemyKills[i]);
+        }
     }
 
     IEnumerator GameOverRoutine() {
+
         isLive = false;
+        saveKillCount();
         yield return new WaitForSeconds(0.8f);
+
         uiResult.gameObject.SetActive(true);
         uiResult.Lose();
         Stop();
         AudioManager.instance.PlayBgm(false);
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Lose, 0);
+    }
+
+    IEnumerator GameVictoryRoutine() {
+
+        isLive = false;
+        saveKillCount();
+        enemyCleaner.SetActive(true);
+        yield return new WaitForSeconds(1f);
+
+        uiResult.gameObject.SetActive(true);
+        uiResult.Win();
+        Stop();
+
+        AudioManager.instance.PlayBgm(false);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Win, 0);
     }
 
     public void GameVictory() {
@@ -236,23 +269,6 @@ public class GameManager : MonoBehaviour{
         }
         
     }
-
-    IEnumerator GameVictoryRoutine() {
-        isLive = false;
-
-        enemyCleaner.SetActive(true);
-
-        yield return new WaitForSeconds(1f);
-
-        uiResult.gameObject.SetActive(true);
-        uiResult.Win();
-        Stop();
-
-        AudioManager.instance.PlayBgm(false);
-        AudioManager.instance.PlaySfx(AudioManager.Sfx.Win, 0);
-    }
-
-
 
     public void GameRetry() {
         SceneManager.LoadScene(0);

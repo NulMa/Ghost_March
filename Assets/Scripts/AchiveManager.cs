@@ -4,9 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AchiveManager : MonoBehaviour{
+    public static AchiveManager achive;
+
     public GameObject[] lockCharacter;
     public GameObject[] unlockCharacter;
     public GameObject uiNotice;
+
+    
 
     enum Achive { UnlockOrchid, UnlockChrysanthemum, UnlockBamboo }
     Achive[] achives;
@@ -19,7 +23,14 @@ public class AchiveManager : MonoBehaviour{
         if (!PlayerPrefs.HasKey("MyData")){
             Init();
         }
+
+        for(int i = 0; i < GameManager.instance.enemyKills.Length; i++) {
+            if(!PlayerPrefs.HasKey("EnemyCounts(" + GameManager.instance.enemyKills[i] + ")")) {
+                PlayerPrefs.SetInt("EnemyCounts(" + GameManager.instance.enemyKills[i] + ")", 0);
+            }   
+        }
     }
+
 
     void Init() {
         PlayerPrefs.SetInt("MyData", 1);
@@ -57,7 +68,7 @@ public class AchiveManager : MonoBehaviour{
                 isachive = GameManager.instance.gameTime == GameManager.instance.maxGameTime;
                 break;
             case Achive.UnlockChrysanthemum:
-                isachive = GameManager.instance.health <= 0; //결재로 변경
+                isachive = GameManager.instance.health <= 0; //결재로 변경?
                 break;
             case Achive.UnlockBamboo:
                 //isachive = GameManager.instance.gameTime == GameManager.instance.maxGameTime;
