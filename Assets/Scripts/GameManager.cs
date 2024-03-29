@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour{
     public float SpecialGauge;
     public float myDir;
     public int[] enemyKills;
+    public int enemyCount;
 
     [Header("# Game Object")]
     public PoolManager pool;
@@ -62,11 +63,12 @@ public class GameManager : MonoBehaviour{
         Application.targetFrameRate = 60;
         StartCoroutine(RegHP());
         versionInfo.text = string.Format("v.{0}", Application.version);
-        saveKillCount();
+        //saveKillCount();
 
         for (int i = 0; i < enemyKills.Length; i++) {
-            Debug.Log(PlayerPrefs.GetInt("EnemyCounts(" + i + ")"));
+            enemyKills[i] = PlayerPrefs.GetInt("EnemyCounts(" + i + ")");
         }
+
     }
 
 
@@ -169,7 +171,7 @@ public class GameManager : MonoBehaviour{
 
     public void saveKillCount() {
         for (int i = 0; i < enemyKills.Length; i++) {
-            PlayerPrefs.SetInt("EnemyCounts(" + i + ")", PlayerPrefs.GetInt("EnemyCounts(" + i + ")")+ enemyKills[i]);
+            PlayerPrefs.SetInt("EnemyCounts(" + i + ")", enemyKills[i]);
         }
     }
 

@@ -16,6 +16,15 @@ public class PoolManager : MonoBehaviour
         for(int index = 0; index < pools.Length; index++) {
             pools[index] = new List<GameObject>();
         }
+        StartCoroutine(checkPool());
+    }
+
+    IEnumerator checkPool() {
+        while (true) {
+            yield return new WaitForSeconds(2f);
+            GameManager.instance.enemyCount =  transform.childCount;
+
+        }
     }
 
     public GameObject Get(int index) {

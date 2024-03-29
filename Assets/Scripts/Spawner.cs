@@ -40,7 +40,7 @@ public class Spawner : MonoBehaviour{
 
         //level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / levelTime), spawnData.Length -1);
 
-        if(timer > spawnData[level].spawnTime) {
+        if(timer > spawnData[level].spawnTime && GameManager.instance.enemyCount < 700) {
             timer = 0;
             Spawn();
         }
