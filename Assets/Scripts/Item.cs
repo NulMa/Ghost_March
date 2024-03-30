@@ -101,6 +101,36 @@ public class Item : MonoBehaviour{
 
         if(level == data.damages.Length) {
             GetComponent<Button>().interactable = false;
+            switch (data.itemId) {
+                case 0:// 은방울
+                    PlayerPrefs.SetInt("Achive No." + 100, 1);
+                    break;
+                case 1: // 부적
+                    PlayerPrefs.SetInt("Achive No." + 101, 1);
+                    break;
+                case 2: // 장도
+                    PlayerPrefs.SetInt("Achive No." + 105, 1);
+                    break;
+                case 3: // 짚신
+                    PlayerPrefs.SetInt("Achive No." + 106, 1);
+                    break;
+                //case 4: // 환약
+                case 5: // 금강저
+                    PlayerPrefs.SetInt("Achive No." + 102, 1);
+                    break;
+                case 6: // 각궁
+                    PlayerPrefs.SetInt("Achive No." + 103, 1);
+                    break;
+                case 7: // 작두
+                    PlayerPrefs.SetInt("Achive No." + 104, 1);
+                    break;
+                case 8: // 야명주
+                    PlayerPrefs.SetInt("Achive No." + 107, 1);
+                    break;
+                case 9: // 생쌀
+                    PlayerPrefs.SetInt("Achive No." + 108, 1);
+                    break;
+            }
         }
     }
 }

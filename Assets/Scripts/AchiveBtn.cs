@@ -32,27 +32,25 @@ public class AchiveBtn : MonoBehaviour{
 
         switch (achiveCode) {
             case 0:
-                if (GameManager.instance.enemyKills[achiveCode] > conditionVal) {
-                    isActive = true;
-                }
-                break;
             case 1:
-                if (GameManager.instance.enemyKills[achiveCode] > conditionVal) {
-                    isActive = true;
-                }
-                break;
             case 2:
-                if (GameManager.instance.enemyKills[achiveCode] > conditionVal) {
-                    isActive = true;
-                }
-                break;
             case 3:
-                if (GameManager.instance.enemyKills[achiveCode] > conditionVal) {
-                    isActive = true;
-                }
-                break;
             case 4:
                 if (GameManager.instance.enemyKills[achiveCode] > conditionVal) {
+                    isActive = true;
+                }
+                break;
+
+            case 100:
+            case 101:
+            case 102:
+            case 103:
+            case 104:
+            case 105:
+            case 106:
+            case 107:
+            case 108:
+                if(PlayerPrefs.GetInt("Achive No." + achiveCode) == 1) {
                     isActive = true;
                 }
                 break;
@@ -60,7 +58,10 @@ public class AchiveBtn : MonoBehaviour{
     }
 
     public void checkAchive() {
-        text.text = GameManager.instance.enemyKills[achiveCode] + " / " + conditionVal;
+        if (achiveCode < 99)
+            text.text = GameManager.instance.enemyKills[achiveCode] + " / " + conditionVal;
+        else
+            text.text = "해금 조건:\n최종 강화 완료";
         if (isActive) {
             Achive.SetActive(true);
         }
