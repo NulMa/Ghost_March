@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour{
     public bool isLive;
     public float gameTime;
     public float maxGameTime;
+    public bool hardMode;
 
     private Touch touch;
 
@@ -329,4 +330,13 @@ public class GameManager : MonoBehaviour{
         Time.timeScale = 1;
         uiJoy.localScale = joySize;
     }
+
+    public void OnHard() {
+        if (hardMode) {
+            hardMode = false;
+        }
+        else
+            hardMode = true;
+    }
+
 }

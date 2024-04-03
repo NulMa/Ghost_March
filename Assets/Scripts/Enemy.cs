@@ -115,9 +115,9 @@ public class Enemy : MonoBehaviour{
         spriter.sortingOrder = 2;
         anim.runtimeAnimatorController = animCon[data.spriteType];
         spriteType = data.spriteType;
-        speed = data.speed;
-        maxHealth = data.health;
-        health = data.health;
+        speed = data.speed * (GameManager.instance.hardMode ? 1.2f : 1); ;      //--¡©¦¤
+        maxHealth = data.health * (GameManager.instance.hardMode ? 1.5f : 1);   //--¦§-> hard mode
+        health = data.health * (GameManager.instance.hardMode ? 1.5f : 1);      //--¦¥
         scale = data.scale;
         transform.localScale = new Vector3(scale, scale, scale);
         spriter.color = data.color;
