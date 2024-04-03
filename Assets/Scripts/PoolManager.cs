@@ -22,8 +22,13 @@ public class PoolManager : MonoBehaviour
     IEnumerator checkPool() {
         while (true) {
             yield return new WaitForSeconds(2f);
-            GameManager.instance.enemyCount =  transform.childCount;
-
+            int resetVal = 0;
+            foreach(Transform child in transform) {
+                if (child.gameObject.activeSelf) {
+                    resetVal++;
+                }
+            }
+            GameManager.instance.enemyCount =  resetVal;
         }
     }
 
