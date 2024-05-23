@@ -71,7 +71,8 @@ public class AchiveManager : MonoBehaviour{
                 isachive = GameManager.instance.health <= 0; //결재로 변경?
                 break;
             case Achive.UnlockBamboo:
-                //isachive = GameManager.instance.gameTime == GameManager.instance.maxGameTime;
+                isachive = (GameManager.instance.gameTime == GameManager.instance.maxGameTime)&&(GameManager.instance.hardMode);
+
                 break;
         }
 

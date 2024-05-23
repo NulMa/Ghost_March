@@ -225,7 +225,7 @@ public class GameManager : MonoBehaviour{
 
         switch (playerId) {
             case 0:
-                AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 0);
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 0);  //750
                 SpecialMove.GetComponent<Bullet>().damage = 75;
                 for (int i = 0; i < 10; i++) {
                     SpecialMove.SetActive(true);
@@ -235,7 +235,7 @@ public class GameManager : MonoBehaviour{
                 break;
 
             case 1:
-                AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 1);
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 1); //700
                 SpecialMove.GetComponent<Bullet>().damage = 20;
                 for (int i = 0; i < 15; i++) {
                     SpecialMove.SetActive(true);
@@ -261,11 +261,21 @@ public class GameManager : MonoBehaviour{
                 break;
 
             case 2:
-                AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 2);
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 2); //900
                 SpecialMove.GetComponent<Bullet>().damage = 300;
                 for (int i = 0; i < 3; i++) {
                     SpecialMove.SetActive(true);
                     yield return new WaitForSeconds(1.2f);
+                    SpecialMove.SetActive(false);
+                }
+                break;
+
+            case 3:
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 2); //1000
+                SpecialMove.GetComponent<Bullet>().damage = 50;
+                for (int i = 0; i < 20; i++) {
+                    SpecialMove.SetActive(true);
+                    yield return new WaitForSeconds(0.1f);
                     SpecialMove.SetActive(false);
                 }
                 break;

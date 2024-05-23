@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f09b0935bb39ec4eb29b6fc0e6df3dd
+guid: cc05c28f865addd45b5702f3e7f1bfdb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_0
+      name: Player_03_SpcMv-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 791247df5386756409701b00cf1f7268
-      internalID: 1112007138
+      spriteID: 5e3b5a510d7f52341905b09df04b49b2
+      internalID: -34140621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_1
+      name: Player_03_SpcMv-Sheet_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 545
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96359ae0589c24547a94963d1d0c2074
-      internalID: 336829466
+      spriteID: fddcca33ff73758489d1c7a9807359e7
+      internalID: 1589358940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_2
+      name: Player_03_SpcMv-Sheet_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 1090
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de40087b551b54c46a180ab36706e4cc
-      internalID: 39591028
+      spriteID: fd4784caddc60c14b8fb8868a3326f47
+      internalID: -2121489245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_3
+      name: Player_03_SpcMv-Sheet_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 1635
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 178026a8d7149f94eb4a5944a92d693a
-      internalID: 1746073724
+      spriteID: 275575cd2fe51c344a8e5b23e58d3bb8
+      internalID: 1943983378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_4
+      name: Player_03_SpcMv-Sheet_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 2180
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 946e5ff552f9c9040ab45c8a8517cdba
-      internalID: 1391236584
+      spriteID: 6f6244db24a949444a6a0cb6fab9e51d
+      internalID: -1032320217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_5
+      name: Player_03_SpcMv-Sheet_5
       rect:
         serializedVersion: 2
-        x: 640
+        x: 2725
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6975ab43b337604dabd1a97bb038990
-      internalID: -464375065
+      spriteID: 505c3aa20ca0a6d47bc40ae2bb999311
+      internalID: 1031626057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_6
+      name: Player_03_SpcMv-Sheet_6
       rect:
         serializedVersion: 2
-        x: 768
+        x: 3270
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aacba7defe9f6a7478eb762352a1fc98
-      internalID: 771175987
+      spriteID: cc3830ba31b5ae043a98133f92b5efba
+      internalID: 1818397577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_7
+      name: Player_03_SpcMv-Sheet_7
       rect:
         serializedVersion: 2
-        x: 896
+        x: 3815
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +278,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d675090bab40114287c24f41fc2ec31
-      internalID: 1703268188
+      spriteID: b79123cc4f2a65d4697647def4b8fb3f
+      internalID: 658101706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_8
+      name: Player_03_SpcMv-Sheet_8
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 4360
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,20 +299,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d1bbdcb316f6d940945b5f17d6e1b9c
-      internalID: 1708379812
+      spriteID: 6bcce8bac65a932428b89e56150167d0
+      internalID: -1815507495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_9
+      name: Player_03_SpcMv-Sheet_9
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 4905
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,20 +320,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5580f47bbd280144481e86c8249299b5
-      internalID: -1546001652
+      spriteID: 6e00fec845a510d438d15a26d9649009
+      internalID: -1201985184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_10
+      name: Player_03_SpcMv-Sheet_10
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 5450
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,20 +341,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0123454575044c545842b9e5ae87be5f
-      internalID: -1506344020
+      spriteID: 4611ec8948ce3024087669f1c9646a32
+      internalID: -353652724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_11
+      name: Player_03_SpcMv-Sheet_11
       rect:
         serializedVersion: 2
-        x: 1408
+        x: 5995
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,20 +362,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb0feebe74b197f458557f67b8a849c4
-      internalID: -1106390478
+      spriteID: be4ce66f58229db40afd1fa45f7f8cce
+      internalID: -916540753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_12
+      name: Player_03_SpcMv-Sheet_12
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 6540
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,20 +383,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cf9f1c2f2c3fd443922cdb759f8459c
-      internalID: -1585925398
+      spriteID: 0edc67e40042a784dbfec488236b64f7
+      internalID: 1962563851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_13
+      name: Player_03_SpcMv-Sheet_13
       rect:
         serializedVersion: 2
-        x: 1664
+        x: 7085
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,20 +404,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5f5afa6e00dc214aa58b704748fa296
-      internalID: -2012857780
+      spriteID: 78f41cc710600d84caf739f7aca8af1f
+      internalID: -973657876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_14
+      name: Player_03_SpcMv-Sheet_14
       rect:
         serializedVersion: 2
-        x: 1792
+        x: 7630
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,20 +425,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa951e0d323f80e4982f9b7ebbb88b40
-      internalID: -1463743985
+      spriteID: 7515c5e3559a92246bc0ca7b6dadf314
+      internalID: 31340038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_15
+      name: Player_03_SpcMv-Sheet_15
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 8175
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,20 +446,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8073e383b341b64eb0e43bf0b4eb117
-      internalID: -2018975156
+      spriteID: 2dd7330fa8fefa346841d3d77ded33c2
+      internalID: -1542376903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_16
+      name: Player_03_SpcMv-Sheet_16
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 8720
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,20 +467,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76a53b02d53cbd640ae2dd31759b7dcf
-      internalID: 393751777
+      spriteID: 1eb42aaef105d35419542a43798d6906
+      internalID: -2093813240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_17
+      name: Player_03_SpcMv-Sheet_17
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 9265
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,20 +488,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a7514aff5229b54fad56827a085ac2c
-      internalID: -161358593
+      spriteID: cef2b38259e421241843c09d7a317936
+      internalID: 1368587747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_18
+      name: Player_03_SpcMv-Sheet_18
       rect:
         serializedVersion: 2
-        x: 2304
+        x: 9810
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,20 +509,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74e6c139cecd8e34b8765126f0b374fc
-      internalID: -827282033
+      spriteID: b42f92911ffc5e844a8feb1abd3571e8
+      internalID: -503828031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_19
+      name: Player_03_SpcMv-Sheet_19
       rect:
         serializedVersion: 2
-        x: 2432
+        x: 10355
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -530,20 +530,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94da46bec84ca56468cfb9fa04d75a98
-      internalID: -1754870585
+      spriteID: 442eb69c1982aee42aa75e00a1be340b
+      internalID: -329672643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_20
+      name: Player_03_SpcMv-Sheet_20
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 10900
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -551,20 +551,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ec7d51232925641b2ed5571a88c927
-      internalID: -913703473
+      spriteID: a20c25a6b3d4f2a42b854c73dd981791
+      internalID: 1060684630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_21
+      name: Player_03_SpcMv-Sheet_21
       rect:
         serializedVersion: 2
-        x: 2688
+        x: 11445
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -572,20 +572,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5872dceb3cfcd643b30990d79d55dd6
-      internalID: 397940136
+      spriteID: 6de6d24a572c38c48b51747303686b6d
+      internalID: -1130730213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_22
+      name: Player_03_SpcMv-Sheet_22
       rect:
         serializedVersion: 2
-        x: 2816
+        x: 11990
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -593,20 +593,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eddd38a7b35a75446ababf5ef7ffd7b5
-      internalID: -42973812
+      spriteID: eea7775af9ce0ef46a39eff4bab68972
+      internalID: -1000386404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_02_SpcMv-Sheet_23
+      name: Player_03_SpcMv-Sheet_23
       rect:
         serializedVersion: 2
-        x: 2944
+        x: 12535
         y: 0
-        width: 128
-        height: 128
+        width: 545
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -614,8 +614,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 838f42a6a57346f4c81bf4e3d219da30
-      internalID: -647232461
+      spriteID: 9486e5cbfc4931f4aa2b3eb6b5eef395
+      internalID: 1888347491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_03_SpcMv-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 13080
+        y: 0
+        width: 545
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43647dcf49d259e408fea09464b2db8e
+      internalID: -663174794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_03_SpcMv-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 13625
+        y: 0
+        width: 545
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36552088643cf7743bbe1c053edb81a2
+      internalID: -1574763259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_03_SpcMv-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 14170
+        y: 0
+        width: 545
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61e5992cd7a70742a34a86c90308d81
+      internalID: -570317165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_03_SpcMv-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 14715
+        y: 0
+        width: 545
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892ee585cda1ddc4c9e7d37c78b61848
+      internalID: 836004207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_03_SpcMv-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 15260
+        y: 0
+        width: 545
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1222338f2f9164fa93eb4b0f586ecd
+      internalID: -917951877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_03_SpcMv-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 15805
+        y: 0
+        width: 545
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65539983e9225e141927ddaafa3f6410
+      internalID: -1406819534
       vertices: []
       indices: 
       edges: []
@@ -631,30 +757,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_02_SpcMv-Sheet_0: 1112007138
-      Player_02_SpcMv-Sheet_1: 336829466
-      Player_02_SpcMv-Sheet_10: -1506344020
-      Player_02_SpcMv-Sheet_11: -1106390478
-      Player_02_SpcMv-Sheet_12: -1585925398
-      Player_02_SpcMv-Sheet_13: -2012857780
-      Player_02_SpcMv-Sheet_14: -1463743985
-      Player_02_SpcMv-Sheet_15: -2018975156
-      Player_02_SpcMv-Sheet_16: 393751777
-      Player_02_SpcMv-Sheet_17: -161358593
-      Player_02_SpcMv-Sheet_18: -827282033
-      Player_02_SpcMv-Sheet_19: -1754870585
-      Player_02_SpcMv-Sheet_2: 39591028
-      Player_02_SpcMv-Sheet_20: -913703473
-      Player_02_SpcMv-Sheet_21: 397940136
-      Player_02_SpcMv-Sheet_22: -42973812
-      Player_02_SpcMv-Sheet_23: -647232461
-      Player_02_SpcMv-Sheet_3: 1746073724
-      Player_02_SpcMv-Sheet_4: 1391236584
-      Player_02_SpcMv-Sheet_5: -464375065
-      Player_02_SpcMv-Sheet_6: 771175987
-      Player_02_SpcMv-Sheet_7: 1703268188
-      Player_02_SpcMv-Sheet_8: 1708379812
-      Player_02_SpcMv-Sheet_9: -1546001652
+      Player_03_SpcMv-Sheet_0: -34140621
+      Player_03_SpcMv-Sheet_1: 1589358940
+      Player_03_SpcMv-Sheet_10: -353652724
+      Player_03_SpcMv-Sheet_11: -916540753
+      Player_03_SpcMv-Sheet_12: 1962563851
+      Player_03_SpcMv-Sheet_13: -973657876
+      Player_03_SpcMv-Sheet_14: 31340038
+      Player_03_SpcMv-Sheet_15: -1542376903
+      Player_03_SpcMv-Sheet_16: -2093813240
+      Player_03_SpcMv-Sheet_17: 1368587747
+      Player_03_SpcMv-Sheet_18: -503828031
+      Player_03_SpcMv-Sheet_19: -329672643
+      Player_03_SpcMv-Sheet_2: -2121489245
+      Player_03_SpcMv-Sheet_20: 1060684630
+      Player_03_SpcMv-Sheet_21: -1130730213
+      Player_03_SpcMv-Sheet_22: -1000386404
+      Player_03_SpcMv-Sheet_23: 1888347491
+      Player_03_SpcMv-Sheet_24: -663174794
+      Player_03_SpcMv-Sheet_25: -1574763259
+      Player_03_SpcMv-Sheet_26: -570317165
+      Player_03_SpcMv-Sheet_27: 836004207
+      Player_03_SpcMv-Sheet_28: -917951877
+      Player_03_SpcMv-Sheet_29: -1406819534
+      Player_03_SpcMv-Sheet_3: 1943983378
+      Player_03_SpcMv-Sheet_4: -1032320217
+      Player_03_SpcMv-Sheet_5: 1031626057
+      Player_03_SpcMv-Sheet_6: 1818397577
+      Player_03_SpcMv-Sheet_7: 658101706
+      Player_03_SpcMv-Sheet_8: -1815507495
+      Player_03_SpcMv-Sheet_9: -1201985184
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
