@@ -7,6 +7,8 @@
 
   	- 1인 제작
 
+	- UGUI
+
 	- 스토어 링크 :
    		https://play.google.com/store/apps/details?id=com.NullMa.GhostMarch&hl=ko&gl=US
 
