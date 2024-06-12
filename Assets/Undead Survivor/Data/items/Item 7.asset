@@ -17,6 +17,7 @@ MonoBehaviour:
   itemName: "\uC791\uB450"
   itemDesc: "\uD53C\uD574 {0}% \uC99D\uAC00.\n\uCE58\uBA85\uD0C0 \uD655\uB960 {1}%"
   itemIcon: {fileID: 21300000, guid: 26b6339734bac374fad09eccfe355433, type: 3}
+  evoItem: {fileID: 21300000, guid: 264fa036b5a04584099d41469f4b1252, type: 3}
   baseDamage: 10
   baseCount: 1
   damages:
@@ -27,6 +28,7 @@ MonoBehaviour:
   - 1.5
   - 2
   - 4
-  counts: 010000000300000005000000070000000e0000001e00000028000000
+  - 8
+  counts: 010000000300000005000000070000000e0000001e0000002800000000000000
   projectile: {fileID: 6964414662318264138, guid: 8eb6b56980b8b5d4cb25474d665a9f5d, type: 3}
   hand: {fileID: 0}

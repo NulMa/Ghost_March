@@ -14,6 +14,7 @@ public class ItemData : ScriptableObject{
     [TextArea]
     public string itemDesc;
     public Sprite itemIcon;
+    public Sprite evoItem;
 
 
     [Header("# Level Data")]
@@ -24,5 +25,6 @@ public class ItemData : ScriptableObject{
 
     [Header("# Weapon")]
     public GameObject projectile;
+    public GameObject projectile_Evo;
     public Sprite hand;
 }

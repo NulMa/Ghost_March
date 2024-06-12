@@ -8,6 +8,9 @@ public class Bullet : MonoBehaviour{
     public int per;
     public bool isInf;
 
+    public Sprite evoSprite;
+    public Animation evoAnim;
+
     Rigidbody2D rigid;
 
     private void Awake() {
@@ -21,6 +24,9 @@ public class Bullet : MonoBehaviour{
             rigid.velocity = dir * 15f;
         }
     }
+
+
+
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (!collision.CompareTag("Enemy") || per == -100 )

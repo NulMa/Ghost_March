@@ -85,6 +85,11 @@ public class Weapon : MonoBehaviour{
         this.count += count;
 
         if (id == 0)
+            /*
+            if (레벨 값 최종이면) {
+                스프라이트 전부 바꾸고 밑의 배치 함수 넘어가게
+            }
+            */
             Batch();
 
 
@@ -92,7 +97,35 @@ public class Weapon : MonoBehaviour{
         player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
 
-    public void Init(ItemData data) {
+
+
+    public void Evolve() {
+        switch (id) {
+            case 0: //shilver bell
+                //GetComponentInChildren<SpriteRenderer>().sprite = 
+                //speed = 150 * Character.WeaponSpeed;
+                break;
+            case 1: // charm
+                speed = 0.5f * Character.WeaponRate;
+                break;
+
+            case 5: // Vajra
+                speed = 5f * Character.WeaponRate;
+                break;
+
+            case 6: // horse bow
+                speed = 3f * Character.WeaponRate;
+                break;
+
+            case 7: //Straw cutter
+                speed = 2.5f * Character.WeaponSpeed;
+                Slash();
+                break;
+
+        }
+    }
+
+        public void Init(ItemData data) {
         //basic setting
         name = "Weapon" + data.itemId;
         transform.parent = player.transform;

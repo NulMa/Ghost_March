@@ -8,11 +8,15 @@ public class Item : MonoBehaviour{
     public int level;
     public Weapon weapon;
     public Gear gear;
+    public bool isEvo;
+
+    public GameObject origin;
 
     Image icon;
     Text textLevel;
     Text textName;
     Text textDesc;
+    Button btn;
 
     private void Awake() {
         icon = GetComponentsInChildren<Image>()[1];
@@ -21,12 +25,35 @@ public class Item : MonoBehaviour{
         Text[] texts = GetComponentsInChildren<Text>();
         textLevel = texts[0];
         textName = texts[1];
-        textDesc = texts[2];
+        if(!isEvo)
+            textDesc = texts[2];
 
         textName.text = data.itemName;
+
+        btn = GetComponent<Button>();
+
+
     }
 
     private void OnEnable() {
+        if (origin != null) {
+            level = origin.GetComponent<Item>().level;
+        }
+
+
+
+        if (isEvo == true) {
+            if (level == data.damages.Length - 1) {
+                transform.localScale = Vector3.zero;
+            }
+            else {
+                transform.localScale = Vector3.one;
+            }
+        }
+
+
+
+
         textLevel.text = "Lv." + (level + 1);
 
         switch (data.itemType) {
@@ -55,11 +82,24 @@ public class Item : MonoBehaviour{
         }
     }
 
+    public void Evolved() {
+        Debug.Log("Evo_UI_disa");
+        transform.localScale = Vector3.zero;
+
+
+    }
+
     public void onClick() {
         switch (data.itemType) {
             case ItemData.ItemType.Melee:
             case ItemData.ItemType.Range:
             case ItemData.ItemType.Splash:
+                if(level == data.damages.Length - 1) {
+                    Evolved();
+                    Debug.Log("sprite change");
+                    Debug.Log("speed rate up");
+                }
+
                 if(level == 0) {
                     GameObject newWeapon = new GameObject();
                     weapon = newWeapon.AddComponent<Weapon>();
@@ -99,6 +139,9 @@ public class Item : MonoBehaviour{
         }
         
 
+
+
+        //achivement
         if(level == data.damages.Length) {
             GetComponent<Button>().interactable = false;
             switch (data.itemId) {

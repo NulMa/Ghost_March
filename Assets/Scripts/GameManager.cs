@@ -59,12 +59,24 @@ public class GameManager : MonoBehaviour{
     public Vector2 touchDirection;
     public float Rad;
 
+
+    //testing options
+    public bool istesting;
+
     private void Awake() {
         instance = this;
         Application.targetFrameRate = 60;
         StartCoroutine(RegHP());
         versionInfo.text = string.Format("v.{0}", Application.version);
         //saveKillCount();
+
+        if(istesting == true) {
+            maxHealth = 5000;
+            health = 5000;
+            for(int i = 0; i < nextExp.Length-5; i++) {
+                nextExp[i] = 1;
+            }
+        }
 
         for (int i = 0; i < enemyKills.Length; i++) {
             enemyKills[i] = PlayerPrefs.GetInt("EnemyCounts(" + i + ")");
@@ -226,7 +238,7 @@ public class GameManager : MonoBehaviour{
         switch (playerId) {
             case 0:
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 0);  //750
-                SpecialMove.GetComponent<Bullet>().damage = 75;
+                SpecialMove.GetComponent<Bullet>().damage = 85;
                 for (int i = 0; i < 10; i++) {
                     SpecialMove.SetActive(true);
                     yield return new WaitForSeconds(0.2f);
@@ -236,7 +248,7 @@ public class GameManager : MonoBehaviour{
 
             case 1:
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.etc, 1); //700
-                SpecialMove.GetComponent<Bullet>().damage = 20;
+                SpecialMove.GetComponent<Bullet>().damage = 30;
                 for (int i = 0; i < 15; i++) {
                     SpecialMove.SetActive(true);
                     AudioManager.instance.PlaySfx(AudioManager.Sfx.newWeap, 2);
@@ -247,7 +259,7 @@ public class GameManager : MonoBehaviour{
                 yield return new WaitForSeconds(0.5f);
                 SpecialMove.SetActive(true);
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.newWeap, 2);
-                SpecialMove.GetComponent<Bullet>().damage = 100;
+                SpecialMove.GetComponent<Bullet>().damage = 150;
                 yield return new WaitForSeconds(0.1f);
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.newWeap, 2);
                 SpecialMove.SetActive(false);
