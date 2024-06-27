@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour{
     public bool isInf;
 
     public Sprite evoSprite;
-    public Animation evoAnim;
+    public AnimationClip EvoClip;
 
     Rigidbody2D rigid;
 

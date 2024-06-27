@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -82,21 +83,17 @@ public class Item : MonoBehaviour{
         }
     }
 
-    public void Evolved() {
-        Debug.Log("Evo_UI_disa");
-        transform.localScale = Vector3.zero;
-
-
-    }
 
     public void onClick() {
         switch (data.itemType) {
             case ItemData.ItemType.Melee:
             case ItemData.ItemType.Range:
             case ItemData.ItemType.Splash:
-                if(level == data.damages.Length - 1) {
-                    Evolved();
+                if(level == data.damages.Length - 1) { //evolve
+                    transform.localScale = Vector3.zero;
                     Debug.Log("sprite change");
+                    data.GetComponent<SpriteRenderer>().sprite = data.evoItem;
+                    //data.GetComponent<Animator>().
                     Debug.Log("speed rate up");
                 }
 

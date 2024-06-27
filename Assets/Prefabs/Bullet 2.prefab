@@ -124,6 +124,8 @@ MonoBehaviour:
   damage: 7
   per: -100
   isInf: 0
+  evoSprite: {fileID: 0}
+  EvoClip: {fileID: 7400000, guid: 650d1e49dd96eaa4fa5c002625a760cf, type: 2}
 --- !u!95 &7689372881515433092
 Animator:
   serializedVersion: 5
